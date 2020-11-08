@@ -1,15 +1,13 @@
 <template>
   <div class="container_all">
-    <h1>
-      Some of my projects.
-    </h1>
+
     <div class="image_container">
 
-      <div class="holder2">
+      <div class="holder2" :style="darkproject">
       <img src="@/assets/n16.png" @click="showModal2" class="img-rounded" alt="N16" >
         <div class="cont">
         <b-modal ref="my-modal2" id="N16modal" hide-footer hide-backdrop  title="Dissipative Particle Dynamics Optimization
-" class="fade modal-title text-center">
+" class="dark fade modal-title text-center">
         <div class="d-block text-center">
           <h3>Derivation of the DPD interaction parameters
             for a coarse-grained simulation of a nanoparticle grafted by polymers by using a novel
@@ -27,9 +25,11 @@
       </b-modal>
     </div></div>
 
-    <div class="holder2">
+    <div class="holder2" :style="darkproject" >
       <div class="cont">
+        <div class="centrare">
       <img src="@/assets/file/defects.png" @click="showModal3" class="img-rounded" alt="Defects" >
+        </div>
       <b-modal ref="my-modal3" id="Defectsmodal" hide-footer hide-backdrop title="Classification of defects on hot-rolled steel" class="defc">
         <div class="explanation d-block text-center">
           <h3> Developed a CNN with Tensorflow to detect and classify
@@ -44,9 +44,11 @@
     </div></div>
 
 
-    <div class="holder2">
+    <div class="holder2" :style="darkproject">
       <div class="cont">
+        <div class="gp">
       <img src="@/assets/gp.png" @click="showModal" class="img-rounded" alt="Gaussian Process" >
+        </div>
       <b-modal ref="my-modal" id="GPGOmodal" hide-footer hide-backdrop title="GPGO" class="gpm">
         <div class="explanation d-block text-center">
           <h3> Bayesian Optimization framework based on Gaussian processes.
@@ -55,8 +57,10 @@
             functions and different numerical solvers to achieve a
             convergence on high dimensional problems.
           </h3>
-          <img src="@/assets/gold_2_mean.png"  class="img-rounded" width="70%">
+          <img src="@/assets/gp.png"  class="img-rounded" width="100%">
+          <img src="@/assets/gold_2_mean.png"  class="img-rounded" width="100%">
           <img src="@/assets/bay.png"  class="img-rounded" width="70%">
+
         </div>
       </b-modal>
     </div></div>
@@ -71,7 +75,15 @@
 
 export default {
   name: "projects",
-  data: () => ({ publicPath: process.env.BASE_URL }),
+  data(){
+    return {
+      publicPath: process.env.BASE_URL,
+      night: false
+    }
+  },
+  mounted(){
+    this.$root.$on("toggle-dark" , this.switch);
+  },
   methods: {
     showModal() {
       this.$refs['my-modal'].show()
@@ -81,6 +93,22 @@ export default {
     },
     showModal3() {
       this.$refs['my-modal3'].show()
+    },
+    switch() {
+      this.night = !this.night
+    },
+  },
+  computed:{
+    darkproject(){
+      if (this.night){
+        return {
+          "background": "#403D40",
+          "box-shadow": "0.2em 0.1em 0 0 #1F0934"
+
+        };
+      } else{
+        return {}
+      }
     }
 
   }
@@ -89,66 +117,48 @@ export default {
 
 <style scoped>
 
-.container_all{
-  margin-left: 100px;
-  margin-right:100px
-}
 .image_container{
   display: flex;
-  height: auto;
   align-content: center;
-  flex-direction: column;
-  justify-content: flex-start;
+  flex-direction: row;
+  justify-content: space-between;
   align-self: center;
-  margin-left: 100px;
-  margin-right:100px
+  width: 100%;
 }
 
 .img-rounded {
-  background: transparent;
-  display: block;
+  display: flex;
   cursor: pointer;
   margin-left: auto;
   margin-right: auto;
-  max-width: 90%;
+  width: 90%;
+  padding-top: 1.8vw;
+
   height: auto;
+  align-self: center;
 }
-
-.img-rounded:hover{
-  opacity: 0.6;
-  transition: 0.3s;
-}
-
 
 .holder2 {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  padding-top: 10px;
-  width: 60%;
-  border: 2px;
+  transition: 0.1s;
+  width: 30vw;
+  border: 2px solid black;
   position: relative;
   margin:auto;
-  width: 100px;
-  height: 100px;
+  height: 30vw;
+  border-radius: 10px;
 
 }
-.holder3 {
-  padding-top: 50px;
-  width: 60%;
-  border: 2px;
-  position: relative;
-  margin:auto;
 
+.holder2:hover{
+  opacity: 0.6;
+  transition: 0.3s;
 }
 .explanation{
   font-size: 12pt;
   font-family: CircularStd,sans-serif;
   font-weight: 30;
   color: #333234;
-}
-
-.holder{
-  padding-top: 50px;
 }
 
 h1 {
@@ -159,6 +169,7 @@ h1 {
   margin-block-end: 0.67em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
+  margin-left: 2vw;
   font-weight: bold;
 }
 
@@ -172,33 +183,8 @@ h3 {
   font-weight: bold;
 }
 
-.holder2::after {
-  content:'';
-  position: absolute;
-  z-index:-1;
-  bottom:-10px;
-  left:2px;
-  width:100%;
-  height:100%;
-  border-radius: 9px!important;
-  background: #E6E1EA;
-  opacity: 0.3;
+.gp{
+  padding-top: 5vw;
 }
 
-.holder3::after {
-  content:'';
-  position: absolute;
-  z-index:-1;
-  bottom:-25px;
-  left:-1px;
-  width:100%;
-  height:100%;
-  border-radius: 9px!important;
-  background: #E6E1EA;
-  opacity: 0.3;
-}
-
-.cont {
-  padding: 2px 16px;
-}
 </style>

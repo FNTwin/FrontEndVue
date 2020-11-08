@@ -40,7 +40,7 @@ export default {
       if (this.isDarkMode){
         return {
           "background": "#201F20",
-          "color": "#130713"
+          "color": "#A6A4A6"
         };
       } else{
         return {}

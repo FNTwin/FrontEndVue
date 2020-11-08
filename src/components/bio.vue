@@ -40,6 +40,9 @@
   <div class="mail" :style="paddingemail">
   <a class="email-link" :style="maildark" href="mailto:cris.gabellini@gmail.com">cris.gabellini@gmail.com</a>
   </div>
+  <div class="project" :style="projectdark">
+    <h1>Some of my projects.</h1>
+  </div>
 </div>
 </template>
 
@@ -91,7 +94,7 @@ export default {
     h3dark(){
       if (this.night){
         return {
-          "color":"#827783"
+          "color":"#A6A4A6"
         }
       }else{
         return {}
@@ -135,6 +138,18 @@ export default {
           "padding-right": "5vw",
           "border-radius": "2vw",
           "align-self":" center",
+        }
+      }else{
+        return {}
+      }
+    },
+    projectdark(){
+      if (this.night){
+        return {
+          "width": "auto",
+          "text-align": "center",
+          "padding-right": "5vw",
+          "border-radius": "2vw"
         }
       }else{
         return {}
@@ -240,5 +255,11 @@ h4{
   text-decoration: underline;
   font-size: 1.3em;
 
+}
+
+.project{
+
+  width: auto;
+  padding-left: 5vw;
 }
 </style>
