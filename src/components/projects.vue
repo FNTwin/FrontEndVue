@@ -124,6 +124,7 @@ export default {
   justify-content: space-between;
   align-self: center;
   width: 100%;
+  margin-bottom: 4vw;
 }
 
 .img-rounded {
