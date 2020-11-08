@@ -1,11 +1,13 @@
 <template>
   <div id="app" :style="color_main">
+    <div class="container_princ">
     <navigation @toggle-dark="toggleDarkMode"/>
     <div class="prima">
       <bio/>
     </div>
     <div class="seconda">
     <projects/>
+    </div>
     </div>
   </div>
 </template>
@@ -37,7 +39,8 @@ export default {
     color_main(){
       if (this.isDarkMode){
         return {
-          "background": "#332A35"
+          "background": "#201F20",
+          "color": "#130713"
         };
       } else{
         return {}
@@ -58,11 +61,16 @@ export default {
   background: white;
 }
 
+.container_princ{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .prima{
-  padding-top: 280px;
+  padding-top: 6vh;
 }
 
 .seconda{
-  padding-top: 320px;
+  padding-top: auto;
 }
 </style>

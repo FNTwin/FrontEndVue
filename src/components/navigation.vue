@@ -34,7 +34,7 @@ export default {
     color(){
       if (this.darkMode){
         return {"color": "#8F3E8F!important",
-                "background": "#201F20"
+                "background": "#403D40"
         };
       } else{
         return {}
@@ -43,7 +43,8 @@ export default {
     color_nav(){
       if (this.darkMode){
         return {
-          "background": "#332A35"
+          //"background": "#332A35"
+          "background" : "#201F20"
 
         };
       } else{
@@ -60,6 +61,7 @@ export default {
     dark(){
       this.darkMode = !this.darkMode;
       this.$emit("toggle-dark");
+      this.$root.$emit("toggle-dark")
     }
   }
 }

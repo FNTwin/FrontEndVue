@@ -1,14 +1,14 @@
 <template>
-  <div class="image_container">
+  <div class="container_all">
     <h1>
       Some of my projects.
     </h1>
+    <div class="image_container">
 
-
-    <div class="holder2">
-
+      <div class="holder2">
       <img src="@/assets/n16.png" @click="showModal2" class="img-rounded" alt="N16" >
-      <b-modal ref="my-modal2" id="N16modal" hide-footer hide-backdrop  title="Dissipative Particle Dynamics Optimization
+        <div class="cont">
+        <b-modal ref="my-modal2" id="N16modal" hide-footer hide-backdrop  title="Dissipative Particle Dynamics Optimization
 " class="fade modal-title text-center">
         <div class="d-block text-center">
           <h3>Derivation of the DPD interaction parameters
@@ -25,9 +25,10 @@
 
         </div>
       </b-modal>
-    </div>
+    </div></div>
 
-    <div class="holder3">
+    <div class="holder2">
+      <div class="cont">
       <img src="@/assets/file/defects.png" @click="showModal3" class="img-rounded" alt="Defects" >
       <b-modal ref="my-modal3" id="Defectsmodal" hide-footer hide-backdrop title="Classification of defects on hot-rolled steel" class="defc">
         <div class="explanation d-block text-center">
@@ -40,10 +41,11 @@
           <img src="@/assets/file/defects.png"  class="img-rounded" width="100%">
         </div>
       </b-modal>
-    </div>
+    </div></div>
 
 
-    <div class="holder">
+    <div class="holder2">
+      <div class="cont">
       <img src="@/assets/gp.png" @click="showModal" class="img-rounded" alt="Gaussian Process" >
       <b-modal ref="my-modal" id="GPGOmodal" hide-footer hide-backdrop title="GPGO" class="gpm">
         <div class="explanation d-block text-center">
@@ -57,6 +59,8 @@
           <img src="@/assets/bay.png"  class="img-rounded" width="70%">
         </div>
       </b-modal>
+    </div></div>
+
     </div>
 
   </div>
@@ -84,12 +88,18 @@ export default {
 </script>
 
 <style scoped>
+
+.container_all{
+  margin-left: 100px;
+  margin-right:100px
+}
 .image_container{
   display: flex;
   height: auto;
   align-content: center;
-  justify-content: space-between;
   flex-direction: column;
+  justify-content: flex-start;
+  align-self: center;
   margin-left: 100px;
   margin-right:100px
 }
@@ -111,11 +121,15 @@ export default {
 
 
 .holder2 {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
   padding-top: 10px;
   width: 60%;
   border: 2px;
   position: relative;
   margin:auto;
+  width: 100px;
+  height: 100px;
 
 }
 .holder3 {
@@ -184,4 +198,7 @@ h3 {
   opacity: 0.3;
 }
 
+.cont {
+  padding: 2px 16px;
+}
 </style>
