@@ -1,6 +1,6 @@
 <template>
   <div class="d-flex align-items-center" id="main">
-    <div container landing>
+    <div class="container landing">
       <div class="landing_bio">
         <div class="titolo">
           <h1>Cristian "FNTwin" Gabellini</h1>

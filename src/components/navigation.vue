@@ -1,18 +1,20 @@
 <template>
-  <div class="container_navbar" id ="navigation">
-    <nav class="navbar navbar-expand-lg fixed-top primary-nav container">
-      <a aria-current="page" class="btn btn-layered offset square" role="button" href="/" style="text-decoration:none;">FNTwin</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+  <div class="container_navbar" id ="navigation" >
+    <nav class="navbar navbar-expand-lg fixed-top primary-nav container" :style="color_nav">
+      <button class="btn btn-layered offset square" @click="dark" :style="color">FNTwin</button>
+      <!--<a aria-current="page" class="btn btn-layered offset square" role="button" href="/" style="text-decoration:none;">FNTwin</a>-->
+      <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
         <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars fa-w-14 " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path>
         </svg>
-      </button>
+      </button>-->
       <div class="collapse navbar-collapse" id="navbar">
         <div class="navbar-nav align-items-center ml-auto">
-          <a class="btn btn-layered offset square" role="button" href="https://github.com/FNTwin" style="text-decoration:none;" target="__blank" >Github</a>
+          <a class="btn btn-layered offset square" role="button" href="https://github.com/FNTwin" style="text-decoration:none;" target="__blank"  :style="color">Github</a>
         </div>
-        <a :href="`${publicPath}CG_Resume.pdf`" class="btn btn-layered offset square" role="button" aria-pressed="true" style="text-decoration:none;" download>CV</a>
-        <a href="mailto:cris.gabellini@gmail.com" class="btn btn-layered offset square" role="button" aria-pressed="true" style="text-decoration:none;">Email me</a>
+        <a :href="`${publicPath}CG_Resume.pdf`" class="btn btn-layered offset square" role="button" aria-pressed="true" style="text-decoration:none;"  :style="color" download>CV</a>
+        <a href="mailto:cris.gabellini@gmail.com" class="btn btn-layered offset square" role="button" aria-pressed="true" style="text-decoration:none;"  :style="color">Email me</a>
       </div>
+
     </nav>
   </div>
 </template>
@@ -22,7 +24,44 @@
 
 export default {
   name: 'navigation_bar',
-  data: () => ({ publicPath: process.env.BASE_URL })
+  data(){
+    return{
+      publicPath: process.env.BASE_URL,
+      darkMode : false
+    }
+  },
+  computed:{
+    color(){
+      if (this.darkMode){
+        return {"color": "#8F3E8F!important",
+                "background": "#201F20"
+        };
+      } else{
+        return {}
+      }
+    },
+    color_nav(){
+      if (this.darkMode){
+        return {
+          "background": "#332A35"
+
+        };
+      } else{
+        return {}
+      }
+    }
+  },
+  watch:{
+    darkMode (){
+
+    }
+  },
+  methods:{
+    dark(){
+      this.darkMode = !this.darkMode;
+      this.$emit("toggle-dark");
+    }
+  }
 }
 
 
@@ -31,13 +70,15 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-
 .container {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  max-width: 100%;
+  border-bottom: 2px solid black;
+  background:white;
+  padding-right: 20px;
+  padding-left: 10px;
   margin-right: auto;
   margin-left: auto;
+  height: 4.3rem;
 }
 
 .fixed-top {
@@ -45,13 +86,19 @@ export default {
   right: 0;
   left: 0;
   z-index: 1030;
+
 }
+
 
 .navbar-expand-lg .navbar-collapse {
   display: flex!important;
   flex-basis: auto;
   position: sticky;
 }
+
+
+
+
 .collapse:not(.show) {
   display: none;
 }
@@ -61,12 +108,6 @@ export default {
   align-items: center;
 }
 
-#navigation {
-  border-bottom: 1px solid #000;
-  background-color: #fff;
-  z-index: 700;
-  position: sticky;
-}
 .fixed-bottom, .fixed-top {
   position: fixed;
   right: 0;
@@ -82,6 +123,7 @@ export default {
 
 div {
   display: block;
+
 }
 
 .primary-nav {
@@ -90,11 +132,12 @@ div {
 }
 
 .square {
-  opacity: 0.1;
+  opacity: 1;
   border-radius: 5px!important;
 }
 .square:hover{
-  opacity: 1;
+  transition: 0.2s;
+  opacity: 0.3;
 }
 .offset {
   box-shadow: 0.4em 0.3em 0 0 #1F0934;
@@ -109,7 +152,7 @@ div {
   padding: 10px 10px;
   transition: .1s ease-out;
   -webkit-transition: .1s ease-out;
-  color: #1F0934;
+  color: #1F0934!important;
 }
 .btn {
   display: inline-block;
@@ -142,5 +185,6 @@ a:-webkit-any-link {
   cursor: pointer;
   text-decoration: underline;
 }
+
 
 </style>

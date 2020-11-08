@@ -1,6 +1,6 @@
 <template>
-  <div id="app">
-    <navigation/>
+  <div id="app" :style="color_main">
+    <navigation @toggle-dark="toggleDarkMode"/>
     <div class="prima">
       <bio/>
     </div>
@@ -18,10 +18,31 @@ import projects from "@/components/projects";
 
 export default {
   name: 'App',
+  data(){
+    return{
+      isDarkMode: false
+    }
+  },
   components: {
     navigation,
     bio,
     projects
+  },
+  methods: {
+    toggleDarkMode(){
+      this.isDarkMode = !this.isDarkMode
+    }
+  },
+  computed:{
+    color_main(){
+      if (this.isDarkMode){
+        return {
+          "background": "#332A35"
+        };
+      } else{
+        return {}
+      }
+    }
   }
 }
 </script>
@@ -32,8 +53,9 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: left;
-  color: #262525;
+  color: #252225;
   margin-top: 60px;
+  background: white;
 }
 
 .prima{
