@@ -14,6 +14,7 @@
     "git": "^0.1.5",
     "vue": "^2.6.12",
     "vue-final-modal": "^0.17.2",
+    "vue-headful": "^2.1.0",
     "vue-js-modal": "^2.0.0-rc.6",
     "vue-plotly": "^1.1.0"
   },

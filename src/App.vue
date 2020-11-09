@@ -1,5 +1,7 @@
 <template>
   <div id="app" :style="color_main">
+    <vue-headful title="Cristian Gabellini Homepage"
+                 description="Personal site of Cristian Gabellini" />
     <div class="container_princ">
     <navigation @toggle-dark="toggleDarkMode"/>
     <div class="prima">

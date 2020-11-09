@@ -7,7 +7,7 @@
       <img src="@/assets/n16.png" @click="showModal2" class="img-rounded" alt="N16" >
         <div class="cont">
         <b-modal ref="my-modal2" id="N16modal" hide-footer hide-backdrop  title="Dissipative Particle Dynamics Optimization
-" class="dark fade modal-title text-center">
+" class="dark fade modal-title text-center modal-body modal-header" >
         <div class="d-block text-center">
           <h3>Derivation of the DPD interaction parameters
             for a coarse-grained simulation of a nanoparticle grafted by polymers by using a novel
@@ -30,8 +30,8 @@
         <div class="centrare">
       <img src="@/assets/file/defects.png" @click="showModal3" class="img-rounded" alt="Defects" >
         </div>
-      <b-modal ref="my-modal3" id="Defectsmodal" hide-footer hide-backdrop title="Classification of defects on hot-rolled steel" class="defc">
-        <div class="explanation d-block text-center">
+      <b-modal  ref="my-modal3" id="Defectsmodal" hide-footer hide-backdrop title="Classification of defects on hot-rolled steel" class="defc">
+        <div class="explanation d-block text-center modal-body modal-header">
           <h3> Developed a CNN with Tensorflow to detect and classify
             images of surface defects on hot-rolled steel.
             Different topologies and hyperparameters were studied
@@ -50,7 +50,7 @@
       <img src="@/assets/gp.png" @click="showModal" class="img-rounded" alt="Gaussian Process" >
         </div>
       <b-modal ref="my-modal" id="GPGOmodal" hide-footer hide-backdrop title="GPGO" class="gpm">
-        <div class="explanation d-block text-center">
+        <div class="explanation d-block text-center modal-body modal-header">
           <h3> Bayesian Optimization framework based on Gaussian processes.
             Hyperparameters tuned by kernel's gradient information and numerical
             solvers. Implementation of various acquisition
@@ -104,6 +104,16 @@ export default {
         return {
           "background": "#403D40",
           "box-shadow": "0.2em 0.1em 0 0 #1F0934"
+
+        };
+      } else{
+        return {}
+      }
+    },
+    mod(){
+      if (this.night){
+        return {
+          "background": "#403D40"
 
         };
       } else{
@@ -188,4 +198,13 @@ h3 {
   padding-top: 5vw;
 }
 
+.modal-header{
+  background: white;
+  border-bottom: 2px solid black;
+}
+
+
+.modal-body{
+  background: white;
+}
 </style>
