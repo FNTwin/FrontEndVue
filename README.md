@@ -1,4 +1,4 @@
-# sito_front
+# Homepage Vue FrontEnd
 
 ## Project setup
 ```
