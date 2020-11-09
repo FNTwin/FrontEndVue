@@ -1,53 +1,51 @@
 <template>
-<div class="bioContainer">
-  <div class="nametitle">
-    <h1>Cristian "FNTwin" Gabellini</h1>
-  </div>
-  <h2 class="tldr">
-    Computational Material Engineer specialized in multiscale simulations
-    and Machine Learning.
-  </h2>
-
-  <div class="tldrme" :style="tldrmedark">
-    <div class="aboutmetext" :style="aboutmedark">
-      <div class="aboutme" :style="aboutmetextdark">
-        <h4 :style="h4dark">About me!</h4>
-      </div>
-  <h3 :style="h3dark">
-    I'm just a guy from Gorizia with a burning passion for the microscopic universe and the computation world.
-    Ab-Initio, All-atoms and Coarse-grain simulations!<br>
-    On my last year of bachelor's I discovered my love for machine learning
-    and I started focusing on its theory and its application in the simulation field.
-    At the end of my master I was able to develop a novel machine learning
-    approach to optimize a Dissipative Particle Dynamics force field.</h3>
+  <div class="bioContainer">
+    <div class="nametitle">
+      <h1>Cristian "FNTwin" Gabellini</h1>
     </div>
-  </div>
-
+    <h2 class="tldr">
+      Computational Material Engineer specialized in multiscale simulations
+      and Machine Learning.
+    </h2>
+    <div class="tldrme" :style="tldrmedark">
+      <div class="aboutmetext" :style="aboutmedark">
+        <div class="aboutme" :style="aboutmetextdark">
+          <h4 :style="h4dark">About me!</h4>
+        </div>
+        <h3 :style="h3dark">
+          I'm just a guy from Gorizia with a burning passion for the microscopic universe and the computation world.
+          Ab-Initio, All-atoms and Coarse-grain simulations!<br>
+          On my last year of bachelor's I discovered my love for machine learning
+          and I started focusing on its theory and its application in the simulation field.
+          At the end of my master I was able to develop a novel machine learning
+          approach to optimize a Dissipative Particle Dynamics force field.</h3>
+      </div>
+    </div>
     <div class="tldrme" :style="tldrmedark">
       <div class="aboutmetext" :style="aboutmedark">
         <div class="aboutme" :style="aboutmetextdark">
           <h4 :style="h4dark">Skills</h4>
         </div>
-  <h3 style="font-size: 1.5em">
-    Languages & Frameworks: <p :style="h3dark">Python, C++, HTML/CSS, Javascript,
-    Flask, FastAPI, Vue.js</p>
-    Packages: <p :style="h3dark">NumPy, SciPy, Pandas, Matplotlib, Tensorflow,
-    scikit-learn, OpenCV, MDanalysis</p>
-    Databases: <p :style="h3dark">MySQL, MongoDB</p>
-    Miscellaneous: <p :style="h3dark">GIT, Unit testing</p>
-  </h3>
-      </div></div>
-  <div class="mail" :style="paddingemail">
-  <a class="email-link" :style="maildark" href="mailto:cris.gabellini@gmail.com">cris.gabellini@gmail.com</a>
+        <h3 style="font-size: 1.5em">
+          Languages & Frameworks: <p :style="h3dark">Python, C++, HTML/CSS, Javascript,
+          Flask, FastAPI, Vue.js</p>
+          Packages: <p :style="h3dark">NumPy, SciPy, Pandas, Matplotlib, Tensorflow,
+          scikit-learn, OpenCV, MDanalysis</p>
+          Databases: <p :style="h3dark">MySQL, MongoDB</p>
+          Miscellaneous: <p :style="h3dark">GIT, Unit testing</p>
+        </h3>
+      </div>
+    </div>
+    <div class="mail" :style="paddingemail">
+      <a class="email-link" :style="maildark" href="mailto:cris.gabellini@gmail.com">cris.gabellini@gmail.com</a>
+    </div>
+    <div class="project" :style="projectdark">
+      <h1>Some of my projects.</h1>
+    </div>
   </div>
-  <div class="project" :style="projectdark">
-    <h1>Some of my projects.</h1>
-  </div>
-</div>
 </template>
 
 <script>
-
 
 export default {
   name: "bio",

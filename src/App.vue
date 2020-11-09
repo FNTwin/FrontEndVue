@@ -3,13 +3,13 @@
     <vue-headful title="Cristian Gabellini Homepage"
                  description="Personal site of Cristian Gabellini" />
     <div class="container_princ">
-    <navigation @toggle-dark="toggleDarkMode"/>
-    <div class="prima">
-      <bio/>
-    </div>
-    <div class="seconda">
-    <projects/>
-    </div>
+      <navigation @toggle-dark="toggleDarkMode"/>
+      <div class="prima">
+        <bio/>
+      </div>
+      <div class="seconda">
+        <projects/>
+      </div>
     </div>
   </div>
 </template>
@@ -18,7 +18,6 @@
 import navigation from "@/components/navigation";
 import bio from "@/components/bio";
 import projects from "@/components/projects";
-
 
 export default {
   name: 'App',

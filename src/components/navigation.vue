@@ -14,13 +14,11 @@
         <a :href="`${publicPath}CG_Resume.pdf`" class="btn btn-layered offset square" role="button" aria-pressed="true" style="text-decoration:none;"  :style="color" download>CV</a>
         <a href="mailto:cris.gabellini@gmail.com" class="btn btn-layered offset square" role="button" aria-pressed="true" style="text-decoration:none;"  :style="color">Email me</a>
       </div>
-
     </nav>
   </div>
 </template>
 
 <script>
-
 
 export default {
   name: 'navigation_bar',
@@ -152,8 +150,8 @@ div {
   font-weight: 500;
   line-height: 1;
   padding: 10px 10px;
-  transition: .1s ease-out;
-  -webkit-transition: .1s ease-out;
+  transition: .3s ease-out;
+  -webkit-transition: .3s ease-out;
   color: #1F0934!important;
 }
 .btn {

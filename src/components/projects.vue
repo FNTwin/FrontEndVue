@@ -1,74 +1,70 @@
 <template>
   <div class="container_all">
-
     <div class="image_container">
-
-      <div class="holder2" :style="darkproject">
-      <img src="@/assets/n16.png" @click="showModal2" class="img-rounded" alt="N16" >
+      <div :style="darkproject" class="holder2">
+        <img alt="N16" class="img-rounded" src="@/assets/n16.png" @click="showModal2" >
         <div class="cont">
-        <b-modal ref="my-modal2" id="N16modal" hide-footer hide-backdrop  title="Dissipative Particle Dynamics Optimization
-" class="dark fade modal-title text-center modal-body modal-header" >
-        <div class="d-block text-center">
-          <h3>Derivation of the DPD interaction parameters
+          <b-modal id="N16modal" ref="my-modal2"
+                   class="dark fade modal-title text-center modal-body modal-header modal-content"
+                   hide-backdrop  hide-footer
+                   title="Dissipative Particle Dynamics Optimization">
+            <div class="d-block text-center">
+              <h3>Derivation of the DPD interaction parameters
             for a coarse-grained simulation of a nanoparticle grafted by polymers by using a novel
             bayesian optimization approach exploiting
             structural insights from atomistic simulations.
             <br><br></h3>
-            <img src="@/assets/n16gif.gif"  class="img-rounded">
-          <img src="@/assets/aa_rdf.png"  class="img-rounded">
-            <img src="@/assets/N16_BS1.png"  class="img-rounded">
-            <img src="@/assets/file/ch_system.png"  class="img-rounded">
-            <img src="@/assets/file/N16b.png"  class="img-rounded" >
-
-
+              <img class="img-rounded"  src="@/assets/n16gif.gif">
+              <img class="img-rounded"  src="@/assets/aa_rdf.png">
+              <img class="img-rounded"  src="@/assets/N16_BS1.png">
+              <img class="img-rounded"  src="@/assets/file/ch_system.png">
+              <img class="img-rounded"  src="@/assets/file/N16b.png" >
+            </div>
+          </b-modal>
         </div>
-      </b-modal>
-    </div></div>
-
-    <div class="holder2" :style="darkproject" >
-      <div class="cont">
-        <div class="centrare">
-      <img src="@/assets/file/defects.png" @click="showModal3" class="img-rounded" alt="Defects" >
-        </div>
-      <b-modal  ref="my-modal3" id="Defectsmodal" hide-footer hide-backdrop title="Classification of defects on hot-rolled steel" class="defc">
-        <div class="explanation d-block text-center modal-body modal-header">
-          <h3> Developed a CNN with Tensorflow to detect and classify
+      </div>
+      <div :style="darkproject" class="holder2" >
+        <div class="cont">
+          <div class="centrare">
+            <img alt="Defects" class="img-rounded"
+                 src="@/assets/file/defects.png" @click="showModal3" >
+          </div>
+          <b-modal  id="Defectsmodal" ref="my-modal3" class="defc" hide-backdrop hide-footer title="Classification of defects on hot-rolled steel">
+            <div class="explanation d-block text-center modal-body modal-header modal-content">
+              <h3> Developed a CNN with Tensorflow to detect and classify
             images of surface defects on hot-rolled steel.
             Different topologies and hyperparameters were studied
             to improve the accuracy of the NN.
-            <br><br>
-            </h3>
-          <img src="@/assets/file/defects.png"  class="img-rounded" width="100%">
+            <br><br></h3>
+              <img class="img-rounded"  src="@/assets/file/defects.png" width="100%">
+            </div>
+          </b-modal>
         </div>
-      </b-modal>
-    </div></div>
-
-
-    <div class="holder2" :style="darkproject">
-      <div class="cont">
-        <div class="gp">
-      <img src="@/assets/gp.png" @click="showModal" class="img-rounded" alt="Gaussian Process" >
-        </div>
-      <b-modal ref="my-modal" id="GPGOmodal" hide-footer hide-backdrop title="GPGO" class="gpm">
-        <div class="explanation d-block text-center modal-body modal-header">
-          <h3> Bayesian Optimization framework based on Gaussian processes.
+      </div>
+      <div :style="darkproject" class="holder2">
+        <div class="cont">
+          <div class="gp">
+            <img alt="Gaussian Process" class="img-rounded"
+                 src="@/assets/gp.png" @click="showModal" >
+          </div>
+          <b-modal id="GPGOmodal" ref="my-modal"
+                   class="gpm" hide-backdrop hide-footer title="GPGO">
+            <div class="explanation d-block text-center modal-body modal-header modal-content">
+              <h3> Bayesian Optimization framework based on Gaussian processes.
             Hyperparameters tuned by kernel's gradient information and numerical
             solvers. Implementation of various acquisition
             functions and different numerical solvers to achieve a
             convergence on high dimensional problems.
           </h3>
-          <img src="@/assets/gp.png"  class="img-rounded" width="100%">
-          <img src="@/assets/gold_2_mean.png"  class="img-rounded" width="100%">
-          <img src="@/assets/bay.png"  class="img-rounded" width="70%">
-
+              <img class="img-rounded"  src="@/assets/gp.png" width="100%">
+              <img class="img-rounded"  src="@/assets/gold_2_mean.png" width="100%">
+              <img class="img-rounded"  src="@/assets/bay.png" width="70%">
+            </div>
+          </b-modal>
         </div>
-      </b-modal>
-    </div></div>
-
+      </div>
     </div>
-
   </div>
-
 </template>
 
 <script>
@@ -198,13 +194,5 @@ h3 {
   padding-top: 5vw;
 }
 
-.modal-header{
-  background: white;
-  border-bottom: 2px solid black;
-}
 
-
-.modal-body{
-  background: white;
-}
 </style>
