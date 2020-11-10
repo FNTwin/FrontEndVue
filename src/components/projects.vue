@@ -4,7 +4,7 @@
       <div :style="darkproject" class="holder2">
         <img alt="N16" class="img-rounded" src="@/assets/n16.png" @click="showModal2" >
         <div class="cont">
-          <b-modal id="N16modal" ref="my-modal2"
+          <b-modal id="N16modal modal-content modal-body modal-header" ref="my-modal2"
                    class="dark fade modal-title text-center modal-body modal-header modal-content"
                    hide-backdrop  hide-footer
                    title="Dissipative Particle Dynamics Optimization">
@@ -29,8 +29,9 @@
             <img alt="Defects" class="img-rounded"
                  src="@/assets/file/defects.png" @click="showModal3" >
           </div>
-          <b-modal  id="Defectsmodal" ref="my-modal3" class="defc" hide-backdrop hide-footer title="Classification of defects on hot-rolled steel">
-            <div class="explanation d-block text-center modal-body modal-header modal-content">
+          <b-modal  id="Defectsmodal" ref="my-modal3" class="dark fade modal-title text-center modal-body modal-header modal-content"
+                    hide-backdrop hide-footer title="Classification of defects on hot-rolled steel">
+            <div class="d-block text-center">
               <h3> Developed a CNN with Tensorflow to detect and classify
             images of surface defects on hot-rolled steel.
             Different topologies and hyperparameters were studied
@@ -48,8 +49,9 @@
                  src="@/assets/gp.png" @click="showModal" >
           </div>
           <b-modal id="GPGOmodal" ref="my-modal"
-                   class="gpm" hide-backdrop hide-footer title="GPGO">
-            <div class="explanation d-block text-center modal-body modal-header modal-content">
+                   class="dark fade modal-title text-center modal-body modal-header modal-content"
+                   hide-backdrop hide-footer title="GPGO">
+            <div class="d-block text-center">
               <h3> Bayesian Optimization framework based on Gaussian processes.
             Hyperparameters tuned by kernel's gradient information and numerical
             solvers. Implementation of various acquisition
@@ -68,7 +70,6 @@
 </template>
 
 <script>
-
 export default {
   name: "projects",
   data(){
@@ -92,7 +93,7 @@ export default {
     },
     switch() {
       this.night = !this.night
-    },
+    }
   },
   computed:{
     darkproject(){
@@ -115,8 +116,10 @@ export default {
       } else{
         return {}
       }
+    },
+    dataplot(){
+      return this.test
     }
-
   }
 }
 </script>
@@ -190,9 +193,6 @@ h3 {
   font-weight: bold;
 }
 
-.gp{
-  padding-top: 5vw;
-}
 
 
 </style>

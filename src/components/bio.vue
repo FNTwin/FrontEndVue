@@ -82,7 +82,7 @@ export default {
           "border": "2px solid black",
           "border-radius": "2vw",
           "box-shadow": "0.4em 0.2em 0 0 #1F0934",
-          "color":"#830F8E",
+          "color":"#C7771F",
           "padding-top": "10px",
         }
       }else{
@@ -136,6 +136,8 @@ export default {
           "padding-right": "5vw",
           "border-radius": "2vw",
           "align-self":" center",
+          "border-bottom": "none",
+          "margin-bottom": "2px"
         }
       }else{
         return {}
@@ -185,9 +187,10 @@ export default {
 }
 
 .aboutme{
-  background: white;
   width: auto;
   padding-left: 5vw;
+  border-bottom: 2px solid black;
+  margin-bottom: 2vh;
 }
 
 .tldr{
@@ -234,7 +237,7 @@ h3{
 }
 
 h4{
-  font-size: 4vw;
+  font-size: 2em;
   font-weight: bold;
 }
 
