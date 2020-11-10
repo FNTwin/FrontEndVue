@@ -1,5 +1,5 @@
 <template>
-  <div class="container_all">
+  <div class="container_all" id="test">
     <div class="image_container">
       <div :style="darkproject" class="holder2">
         <img alt="N16" class="img-rounded" src="@/assets/n16.png" @click="showModal2" >
@@ -70,6 +70,7 @@
 </template>
 
 <script>
+
 export default {
   name: "projects",
   data(){
@@ -193,6 +194,9 @@ h3 {
   font-weight: bold;
 }
 
+.gp{
+  padding-top: 5vw;
+}
 
 
 </style>
