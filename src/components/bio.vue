@@ -258,6 +258,7 @@ export default {
   background-color: #e4e3e5;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  transition: .3s ease-in-out
 
 }
 
