@@ -44,7 +44,6 @@
           > <input type="text"  v-model="back_nome"
                    v-on:keypress.enter="digitazione"
                    class="digit">
-          <p :style="h3dark"></p>
         </h3>
       </div>
     </div>
@@ -194,10 +193,6 @@ export default {
     projectdark(){
       if (this.night){
         return {
-          "width": "auto",
-          "text-align": "center",
-          "padding-right": "5vw",
-          "border-radius": "2vw"
         }
       }else{
         return {}
@@ -399,6 +394,10 @@ h4{
 
 }
 
+@keyframes blink-input {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
 
 .digit{
   outline: none;
@@ -409,7 +408,8 @@ h4{
   background-color: transparent;
   color: #B87324;
   caret-color: orange;
-  display: inline;
+  border-left: 0.6em solid orange;
+  animation:   blink-input 1.5s step-end infinite;
 }
 
 #commands_list{

@@ -83,7 +83,7 @@ export default {
   margin-right: auto;
   margin-left: auto;
   height: 4.3rem;
-  transition: .3s ease-in-out
+  transition: .3s ease-in-out;
 }
 
 .fixed-top {
@@ -91,6 +91,7 @@ export default {
   right: 0;
   left: 0;
   z-index: 1030;
+
 
 }
 

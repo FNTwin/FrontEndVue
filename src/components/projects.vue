@@ -128,6 +128,7 @@ export default {
 
 <style scoped>
 
+
 .image_container{
   display: flex;
   align-content: center;
