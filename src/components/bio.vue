@@ -70,13 +70,14 @@ export default {
       "Cristian.ml" : "[\"Gaussian Processes\", " +
           "\"Bayesian Optimization\", \"Deep Learning\"]",
       "Cristian.gabbo" : "\"This guy owes us an elevator\"",
-      "Cristian.location" : "Gorizia (GO), Italy",
-      "Cristian.aboutMe" : "Just a guy with a burning passion for machine learning and the microscopic world." +
-          " I focus my studied on multiscale modelling techniques with machine learning approaches.",
+      "Cristian.location" : "\"Gorizia (GO), Italy\"",
+      "Cristian.aboutMe" : "\"Just a guy with a burning passion for machine learning and the microscopic world." +
+          " I focus my studied on multiscale modelling techniques with machine learning approaches\"",
       "Cristian.simulations": "[\"Ab-initio\", \"All-Atoms\", \"Coarse-graining DPD\"]",
       "Cristian.interests" : "[\"Skateboard\", \"Snowboard\", \"Programming\", \"Computation\", \"Videogames\"]",
+      "Cristian.simulationSoftware" : "[\"Quantum-espresso\", \"Amber\", \"LAMMPS\", \"DigiMat\"]",
       "help" : "Cristian.corva Cristian.ml Cristian.gabbo Cristian.location" +
-          " Cristian.aboutMe Cristian.interests Cristian.simulations"
+          " Cristian.aboutMe Cristian.interests Cristian.simulations Cristian.simulationSoftware"
     },
   }
   },
