@@ -49,7 +49,7 @@
       </div>
     </div>
     <div class="project" :style="projectdark">
-      <h1>Some of my projects.</h1>
+      <h1 id="project">Some of my projects.</h1>
     </div>
   </div>
 </template>
@@ -70,8 +70,15 @@ export default {
       "Cristian.corva" : "\"Stop making me do frontend please\"",
       "Cristian.ml" : "[\"Gaussian Processes\", " +
           "\"Bayesian Optimization\", \"Deep Learning\"]",
-      "help" : "Cristian.corva\tCristian.ml"
-    }
+      "Cristian.gabbo" : "\"This guy owes us an elevator\"",
+      "Cristian.location" : "Gorizia (GO), Italy",
+      "Cristian.aboutMe" : "Just a guy with a burning passion for machine learning and the microscopic world." +
+          " I focus my studied on multiscale modelling techniques with machine learning approaches.",
+      "Cristian.simulations": "[\"Ab-initio\", \"All-Atoms\", \"Coarse-graining DPD\"]",
+      "Cristian.interests" : "[\"Skateboard\", \"Snowboard\", \"Programming\", \"Computation\", \"Videogames\"]",
+      "help" : "Cristian.corva Cristian.ml Cristian.gabbo Cristian.location" +
+          " Cristian.aboutMe Cristian.interests Cristian.simulations"
+    },
   }
   },
   mounted(){
@@ -86,9 +93,6 @@ export default {
       for (let index=0;index<arg.nome.length; index++){
         console.log(arg.display_nome.concat(arg.nome[index]))
         arg.display_nome.concat(arg.nome[index])
-        setTimeout(function () {
-          console.log(arg.display_nome.concat(arg.nome[index]))
-        } , 500)
       }
     },
     add(value){
@@ -126,7 +130,7 @@ export default {
     color_skills(){
       if (this.night){
         return {
-          "background":"black",
+          "background":"black"
         };
       } else{
         return {}
@@ -160,6 +164,9 @@ export default {
       if (this.night){
         return {
           "background":"#CBBECC",
+          "transition": ".3s ease-in-out"
+
+
         }
       }else{
         return {}
@@ -177,6 +184,8 @@ export default {
       if (this.night){
         return {
           "background": "#403D40",
+          "transition": ".3s ease-in-out"
+
         }
       }else{
         return {}
@@ -399,6 +408,7 @@ h4{
   background-color: transparent;
   color: #B87324;
   caret-color: orange;
+  display: inline;
 }
 
 #commands_list{
@@ -419,5 +429,9 @@ a {
   margin: 0; /* To remove default bottom margin */
   padding: 0; /* To remove default left padding */
   font-size: 0.95em!important;
+}
+
+#project{
+  font-size: min(6vw, 4em);
 }
 </style>

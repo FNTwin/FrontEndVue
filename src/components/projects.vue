@@ -101,7 +101,8 @@ export default {
       if (this.night){
         return {
           "background": "#403D40",
-          "box-shadow": "0.2em 0.1em 0 0 #1F0934"
+          "box-shadow": "0.2em 0.1em 0 0 #1F0934",
+          "transition": ".3s ease-in-out"
 
         };
       } else{

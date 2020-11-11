@@ -42,7 +42,7 @@ export default {
         return {
           "background": "#201F20",
           "color": "#A6A4A6",
-          "transition": ".3s ease-out"
+          "transition": ".3s ease-in-out"
         };
       } else{
         return {}
@@ -61,6 +61,7 @@ export default {
   color: #252225;
   margin-top: 60px;
   background: #F2EFEB;
+  transition: .3s ease-in-out
 
 }
 

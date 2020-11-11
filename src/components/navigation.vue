@@ -1,7 +1,10 @@
 <template>
   <div class="container_navbar" id ="navigation" >
     <nav class="navbar navbar-expand-lg fixed-top primary-nav container" :style="color_nav">
-      <button class="btn btn-layered offset square" @click="dark" :style="color">FNTwin</button>
+      <button class=" btn btn-layered offset square" @click="dark" :style="color">
+        FNTwin
+
+      </button>
       <!--<a aria-current="page" class="btn btn-layered offset square" role="button" href="/" style="text-decoration:none;">FNTwin</a>-->
       <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
         <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars fa-w-14 " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path>
@@ -32,7 +35,8 @@ export default {
     color(){
       if (this.darkMode){
         return {"color": "#8F3E8F!important",
-                "background": "#403D40"
+                "background": "#403D40",
+                "transition": ".3s ease-in-out"
         };
       } else{
         return {}
@@ -73,12 +77,13 @@ export default {
 .container {
   max-width: 100%;
   border-bottom: 2px solid black;
-  background:#F7F7FA;
+  background:#D1D2CF;
   padding-right: 20px;
   padding-left: 10px;
   margin-right: auto;
   margin-left: auto;
   height: 4.3rem;
+  transition: .3s ease-in-out
 }
 
 .fixed-top {
@@ -186,5 +191,19 @@ a:-webkit-any-link {
   text-decoration: underline;
 }
 
+.nightmode{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
 
+}
+
+.nightmode_image{
+
+  width: 30px;
+  height: 30px;
+
+}
 </style>
