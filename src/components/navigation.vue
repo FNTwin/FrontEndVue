@@ -73,7 +73,7 @@ export default {
 .container {
   max-width: 100%;
   border-bottom: 2px solid black;
-  background:white;
+  background:#F7F7FA;
   padding-right: 20px;
   padding-left: 10px;
   margin-right: auto;
@@ -143,7 +143,7 @@ div {
   box-shadow: 0.4em 0.3em 0 0 #1F0934;
 }
 .btn-layered {
-  background: white;
+  background: #EBEBEF;
   border: 2px solid #1F0934;
   font-family: CircularStd,sans-serif!important;
   font-size: 10pt;

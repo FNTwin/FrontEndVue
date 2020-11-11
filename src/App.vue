@@ -41,7 +41,8 @@ export default {
       if (this.isDarkMode){
         return {
           "background": "#201F20",
-          "color": "#A6A4A6"
+          "color": "#A6A4A6",
+          "transition": ".3s ease-out"
         };
       } else{
         return {}
@@ -59,7 +60,8 @@ export default {
   text-align: left;
   color: #252225;
   margin-top: 60px;
-  background: white;
+  background: #F2EFEB;
+
 }
 
 .container_princ{

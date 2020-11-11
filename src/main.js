@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.css'
 import BootstrapVue from 'bootstrap-vue'
 import vueHeadful from 'vue-headful';
 
-
 Vue.component('vue-headful', vueHeadful);
 Vue.use(BootstrapVue)
 

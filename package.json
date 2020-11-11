@@ -20,7 +20,8 @@
     "vue-final-modal": "^0.17.2",
     "vue-headful": "^2.1.0",
     "vue-js-modal": "^2.0.0-rc.6",
-    "vue-plotly": "^1.1.0"
+    "vue-plotly": "^1.1.0",
+    "vue-text-transition": "^1.0.19"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
