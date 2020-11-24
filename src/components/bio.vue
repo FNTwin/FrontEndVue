@@ -7,7 +7,7 @@
       Computational Material Engineer specialized in multiscale simulations
       and Machine Learning.
     </h2>
-    <div class="tldrme" :style="tldrmedark">
+    <div class="tldrme" :style="tldrmedark" ref="scroll">
       <div class="aboutmetext" :style="aboutmedark">
         <div class="aboutme" :style="aboutmetextdark">
           <div class="header_bottoni">
@@ -16,12 +16,13 @@
           <div class="header_bottone_verde"></div>
         </div>
         </div>
-        <h3>
+        <div class="scrolltext">
+        <h3><!--
           > Cristian.contact <p :style="h3dark">
           ["<a href="mailto:cris.gabellini@gmail.com"
                aria-pressed="true"
                style="text-decoration:none;"
-               :style="color">cris.gabellini@gmail.com</a>"
+               :style="color">cris.gabellini@gmail.com</a>",
           "<a href="https://github.com/FNTwin"
              style="text-decoration:none;"
              target="__blank"  :style="color">Github</a>"]
@@ -34,7 +35,7 @@
           > Cristian.packages <p :style="h3dark">["NumPy", "SciPy", "Pandas", "Matplotlib", "Tensorflow",
           "scikit-learn", "OpenCV", "MDanalysis"]</p>
           > Cristian.databases <p :style="h3dark">["MySQL", "MongoDB"]</p>
-          > Cristian.various <p :style="h3dark">["GIT", "Unit testing"]</p>
+          > Cristian.various <p :style="h3dark">["GIT", "Unit testing"]</p>-->
           <ul id="commands_list" style="list-style-type:none;">
             <li v-for="(item,index) in itmes" :key="index" >
               <h3 id="commandtext">> {{ command_array[index] }}</h3>
@@ -45,6 +46,7 @@
                    v-on:keypress.enter="digitazione"
                    class="digit">
         </h3>
+        </div>
       </div>
     </div>
     <div class="project" :style="projectdark">
@@ -66,6 +68,12 @@ export default {
     cycle_array: [],
     command_array: [],
     options: {
+      "clear" : "",
+      "Cristian.education" : "[\"Bachelor's degree in Industrial Engineering\", \"Master's degree in Material Engineering\"]",
+      "Cristian.languages" : "[\"Python\", \"C++\", \"HTML/CSS\", \"Javascript\", \"Flask\", \"FastAPI\", \"Vue.js\"]",
+      "Cristian.packages" : "[\"Numpy\", \"SciPy\", \"Pandas\", \"Matplotlib\", \"Tensorflow\", \"scikit-learn\", \"OpenCV\", \"MDanalysis\"]",
+      "Cristian.databases" : "[\"MySQL\", \"MongoDB\"]",
+      "Cristian.various" : "[\"GIT\", \"Unit testing\"]",
       "Cristian.corva" : "\"Stop making me do frontend please\"",
       "Cristian.ml" : "[\"Gaussian Processes\", " +
           "\"Bayesian Optimization\", \"Deep Learning\"]",
@@ -77,15 +85,26 @@ export default {
       "Cristian.interests" : "[\"Skateboard\", \"Snowboard\", \"Programming\", \"Computation\", \"Videogames\"]",
       "Cristian.simulationSoftware" : "[\"Quantum-espresso\", \"Amber\", \"LAMMPS\", \"DigiMat\"]",
       "help" : "Cristian.corva Cristian.ml Cristian.gabbo Cristian.location" +
-          " Cristian.aboutMe Cristian.interests Cristian.simulations Cristian.simulationSoftware"
+          " Cristian.aboutMe Cristian.interests Cristian.simulations Cristian.simulationSoftware" +
+          " Cristian.education Cristian.languages Cristian.packages Cristian.databases Cristian.various clear"
     },
   }
   },
   mounted(){
     this.$root.$on("toggle-dark" , this.switch);
     this.name_init(0, this)
+    this.init("Cristian.education")
+    this.init("Cristian.languages")
+    this.init("Cristian.packages")
+    this.init("Cristian.databases")
+    this.init("Cristian.various")
   },
   methods: {
+    init(nome){
+      this.display_nome=this.options[nome]
+      this.add(this.display_nome)
+      this.add2(nome)
+    },
     switch() {
       this.night = !this.night
     },
@@ -102,6 +121,11 @@ export default {
     add2(value){
       this.command_array.push(value)
     },
+    clear(){
+      this.command_array=[];
+      this.cycle_array=[];
+      this.display_array=[];
+    },
     digitazione(){
       let temp=this.back_nome
       this.back_nome=""
@@ -109,6 +133,9 @@ export default {
         this.display_nome=this.options[temp]
         this.add(this.display_nome)
         this.add2(temp)
+        if (temp === "clear"){
+          this.clear()
+        }
       } else{
         if (temp.replace(/\s/g,"")===""){
           this.display_nome=""
@@ -221,8 +248,7 @@ export default {
   font-size: 100%;
   width: 90%;
   max-width: 1000px;
-  margin:auto
-
+  margin:auto;
 }
 
 @keyframes h1 {
@@ -262,6 +288,7 @@ export default {
   padding-left: 7.2vw;
   width: 89%;
   margin-top: 10px;
+
 }
 
 .tldrme{
@@ -275,11 +302,23 @@ export default {
 
 .aboutmetext{
   width: 100%;
+  min-height: 45vh;
   margin:auto;
   background: #201E21;
   border-radius:10px;
   color:#B87324;
-  border: 1px solid #4D4D50
+  border: 1px solid #4D4D50;
+  font-size: 1em!important;
+}
+
+.scrolltext{
+  overflow: auto;
+  max-height: 45vh;
+  display: flex;
+  flex-direction: column-reverse;
+}
+::-webkit-scrollbar {
+  display: none;
 }
 
 .skills{
@@ -319,7 +358,7 @@ h2{
 }
 
 h3{
-  font-size: min(100vw, 1.3em)!important;
+  font-size: min(100vw, 1.2em)!important;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -410,13 +449,13 @@ h4{
   color: #B87324;
   caret-color: orange;
   border-left: 0.6em solid orange;
+  width: 90%;
   animation:   blink-input 1.5s step-end infinite;
 }
 
 #commands_list{
   margin: 0; /* To remove default bottom margin */
   padding: 0; /* To remove default left padding */
-
 }
 a {
   color: #348BB4;
@@ -424,7 +463,7 @@ a {
 
 #listext{
   color:#6E5BBB;
-  font-size: 1em!important;
+  font-size: 0.9em!important;
 }
 
 #commandtext{
