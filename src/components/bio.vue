@@ -93,6 +93,7 @@ export default {
   mounted(){
     this.$root.$on("toggle-dark" , this.switch);
     this.name_init(0, this)
+    console.log("Welcome on my webpage! Type help in the terminal to see the available commands!")
     this.init("Cristian.education")
     this.init("Cristian.languages")
     this.init("Cristian.packages")
