@@ -15,8 +15,12 @@
         <div class="navbar-nav align-items-center ml-auto">
           <a class="btn btn-layered offset square" role="button" href="https://github.com/FNTwin" style="text-decoration:none;" target="__blank"  :style="color">Github</a>
         </div>
-        <a :href="`${publicPath}CG_Resume.pdf`" class="btn btn-layered offset square" role="button" aria-pressed="true" style="text-decoration:none;"  :style="color" download>CV</a>
-        <a href="mailto:cris.gabellini@gmail.com" class="btn btn-layered offset square" role="button" aria-pressed="true" style="text-decoration:none;"  :style="color">Email me</a>
+        <a :href="`${publicPath}CG_Resume.pdf`" class="btn btn-layered offset square" role="button" aria-pressed="true" style="text-decoration:none;"  :style="color" target="_blank">CV</a>
+        <a href="mailto:cris.gabellini@gmail.com"
+           class="btn btn-layered offset square" role="button"
+           aria-pressed="true"
+           style="text-decoration:none;"  :style="color"
+           @click="displaymail"> {{this.email[mailmessage]}}</a>
       </div>
       </div>
     </nav>
@@ -30,7 +34,12 @@ export default {
   data(){
     return{
       publicPath: process.env.BASE_URL,
-      darkMode : false
+      darkMode : false,
+      email : {
+        "false" : "Email me",
+        "true" : "cris.gabellini@gmail.com"
+      },
+      mailmessage : false
     }
   },
   computed:{
@@ -65,6 +74,9 @@ export default {
       this.darkMode = !this.darkMode;
       this.$emit("toggle-dark");
       this.$root.$emit("toggle-dark")
+    },
+    displaymail(){
+      this.mailmessage = !this.mailmessage
     }
   }
 }

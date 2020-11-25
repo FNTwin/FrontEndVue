@@ -75,6 +75,7 @@ export default {
       "Cristian.databases" : "[\"MySQL\", \"MongoDB\"]",
       "Cristian.various" : "[\"GIT\", \"Unit testing\"]",
       "Cristian.corva" : "\"Stop making me do frontend please\"",
+      "Cristian.email" : "\"cris.gabellini@gmail.com\"",
       "Cristian.ml" : "[\"Gaussian Processes\", " +
           "\"Bayesian Optimization\", \"Deep Learning\"]",
       "Cristian.gabbo" : "\"This guy owes us an elevator\"",
@@ -83,8 +84,9 @@ export default {
           " I focus my studied on multiscale modelling techniques with machine learning approaches\"",
       "Cristian.simulations": "[\"Ab-initio\", \"All-Atoms\", \"Coarse-graining DPD\"]",
       "Cristian.interests" : "[\"Skateboard\", \"Snowboard\", \"Programming\", \"Computation\", \"Videogames\"]",
+      "Cristian.esport" : "\"Professional Call of Duty and Overwatch player\"",
       "Cristian.simulationSoftware" : "[\"Quantum-espresso\", \"Amber\", \"LAMMPS\", \"DigiMat\"]",
-      "help" : "Cristian.corva Cristian.ml Cristian.gabbo Cristian.location" +
+      "help" : "Cristian.esport Cristian.email Cristian.ml Cristian.gabbo Cristian.corva Cristian.location" +
           " Cristian.aboutMe Cristian.interests Cristian.simulations Cristian.simulationSoftware" +
           " Cristian.education Cristian.languages Cristian.packages Cristian.databases Cristian.various clear"
     },

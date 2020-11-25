@@ -6,8 +6,9 @@
         <img alt="N16" class="img-rounded" src="@/assets/n16.png" @click="showModal2" >
         <div class="cont">
           <div class="centrare">
-          <b-modal id="N16modal modal-content modal-body modal-header" ref="my-modal2"
-                   :class="modal"
+          <b-modal id="N16modal modal-content modal-body modal-header"
+                   ref="my-modal2"
+                   :class="modal-content"
                    hide-backdrop  hide-footer
                    title="Dissipative Particle Dynamics Optimization">
             <div class="d-block text-center">
@@ -208,6 +209,9 @@ h3 {
   font-weight: bold;
 }
 
+.modal-content{
+  background: blue;
+}
 
 
 </style>
