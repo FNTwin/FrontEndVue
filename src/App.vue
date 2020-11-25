@@ -62,7 +62,6 @@ export default {
   margin-top: 60px;
   background: #F2EFEB;
   transition: .3s ease-in-out
-
 }
 
 .container_princ{
@@ -71,7 +70,7 @@ export default {
   justify-content: space-between;
 }
 .prima{
-  padding-top: 6vh;
+  padding-top: 4vh;
 }
 
 .seconda{

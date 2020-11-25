@@ -1,11 +1,13 @@
 <template>
   <div class="container_all" id="test">
+    <div class="container2">
     <div class="image_container">
       <div :style="darkproject" class="holder2">
         <img alt="N16" class="img-rounded" src="@/assets/n16.png" @click="showModal2" >
         <div class="cont">
+          <div class="centrare">
           <b-modal id="N16modal modal-content modal-body modal-header" ref="my-modal2"
-                   class="dark fade modal-title text-center modal-body modal-header modal-content"
+                   :class="modal"
                    hide-backdrop  hide-footer
                    title="Dissipative Particle Dynamics Optimization">
             <div class="d-block text-center">
@@ -21,15 +23,14 @@
               <img class="img-rounded"  src="@/assets/file/N16b.png" >
             </div>
           </b-modal>
+          </div>
         </div>
       </div>
       <div :style="darkproject" class="holder2" >
+        <img alt="Defects" class="img-rounded"
+             src="@/assets/file/defects.png" @click="showModal3" >
         <div class="cont">
-          <div class="centrare">
-            <img alt="Defects" class="img-rounded"
-                 src="@/assets/file/defects.png" @click="showModal3" >
-          </div>
-          <b-modal  id="Defectsmodal" ref="my-modal3" class="dark fade modal-title text-center modal-body modal-header modal-content"
+          <b-modal  id="Defectsmodal" ref="my-modal3" :class="modal"
                     hide-backdrop hide-footer title="Classification of defects on hot-rolled steel">
             <div class="d-block text-center">
               <h3> Developed a CNN with Tensorflow to detect and classify
@@ -43,14 +44,14 @@
         </div>
       </div>
       <div :style="darkproject" class="holder2">
+        <img alt="Gaussian Process" class="img-rounded"
+             src="@/assets/gp.png" @click="showModal" >
         <div class="cont">
           <div class="gp">
-            <img alt="Gaussian Process" class="img-rounded"
-                 src="@/assets/gp.png" @click="showModal" >
           </div>
           <b-modal id="GPGOmodal" ref="my-modal"
-                   class="dark fade modal-title text-center modal-body modal-header modal-content"
-                   hide-backdrop hide-footer title="GPGO">
+                   :class="model"
+                   hide-backdrop hide-footer title="GPGO" :style="mod">
             <div class="d-block text-center">
               <h3> Bayesian Optimization framework based on Gaussian processes.
             Hyperparameters tuned by kernel's gradient information and numerical
@@ -65,6 +66,7 @@
           </b-modal>
         </div>
       </div>
+    </div>
     </div>
   </div>
 </template>
@@ -113,7 +115,6 @@ export default {
       if (this.night){
         return {
           "background": "#403D40"
-
         };
       } else{
         return {}
@@ -128,15 +129,46 @@ export default {
 
 <style scoped>
 
-
+.container2{
+  max-width: 100%;
+  display:flex;
+  align-content: center;
+  justify-content: center;
+  height: 30vw;
+}
 .image_container{
   display: flex;
-  align-content: center;
+  flex-direction: row;
+  padding-bottom: 5%;
+  width: 90%;
+  height: 90%;
+  max-width: 1500px;
+}
+
+
+.holder2 {
+  display: flex!important;
+  background: #D9D7D3;
+  box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.2);
+  transition: 0.1s;
+  width: 26vw;
+  height: 26vw;
+  max-width: 460px;
+  max-height: 460px;
+  border: 1.5px solid black;
+  position: relative;
   flex-direction: row;
   justify-content: space-between;
-  align-self: center;
-  width: 100%;
-  margin-bottom: 4vw;
+  justify-items: center;
+  align-content: center;
+  border-radius: 10px;
+  margin: auto;
+
+}
+
+.holder2:hover{
+  opacity: 0.6;
+  transition: 0.3s;
 }
 
 .img-rounded {
@@ -145,27 +177,7 @@ export default {
   margin-left: auto;
   margin-right: auto;
   width: 90%;
-  padding-top: 1.8vw;
-
-  height: auto;
   align-self: center;
-}
-
-.holder2 {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.1s;
-  width: 30vw;
-  border: 2px solid black;
-  position: relative;
-  margin:auto;
-  height: 30vw;
-  border-radius: 10px;
-
-}
-
-.holder2:hover{
-  opacity: 0.6;
-  transition: 0.3s;
 }
 .explanation{
   font-size: 12pt;
@@ -196,9 +208,6 @@ h3 {
   font-weight: bold;
 }
 
-.gp{
-  padding-top: 5vw;
-}
 
 
 </style>

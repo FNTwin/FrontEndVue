@@ -1,6 +1,7 @@
 <template>
-  <div class="container_navbar" id ="navigation" >
+  <div class="container_navbar" id ="navigation">
     <nav class="navbar navbar-expand-lg fixed-top primary-nav container" :style="color_nav">
+      <div class="cont_navbar">
       <button class=" btn btn-layered offset square" @click="dark" :style="color">
         FNTwin
 
@@ -16,6 +17,7 @@
         </div>
         <a :href="`${publicPath}CG_Resume.pdf`" class="btn btn-layered offset square" role="button" aria-pressed="true" style="text-decoration:none;"  :style="color" download>CV</a>
         <a href="mailto:cris.gabellini@gmail.com" class="btn btn-layered offset square" role="button" aria-pressed="true" style="text-decoration:none;"  :style="color">Email me</a>
+      </div>
       </div>
     </nav>
   </div>
@@ -47,7 +49,6 @@ export default {
         return {
           //"background": "#332A35"
           "background" : "#201F20"
-
         };
       } else{
         return {}
@@ -75,15 +76,24 @@ export default {
 <style scoped>
 
 .container {
+
   max-width: 100%;
   border-bottom: 2px solid black;
-  background:#D1D2CF;
-  padding-right: 20px;
-  padding-left: 10px;
+  background:#D9D7D3;
   margin-right: auto;
   margin-left: auto;
-  height: 4.3rem;
+  height: 4.1rem;
   transition: .3s ease-in-out;
+}
+
+.cont_navbar{
+  display: flex;
+  width: 100%;
+  max-width: 1600px;
+  margin: auto;
+  justify-content: space-between;
+  justify-self: center;
+  flex-direction: row;
 }
 
 .fixed-top {
@@ -92,12 +102,12 @@ export default {
   left: 0;
   z-index: 1030;
 
-
 }
 
 
 .navbar-expand-lg .navbar-collapse {
   display: flex!important;
+  width: auto;
   flex-basis: auto;
   position: sticky;
 }
@@ -108,11 +118,7 @@ export default {
 .collapse:not(.show) {
   display: none;
 }
-.navbar-collapse {
-  flex-basis: 100%;
-  flex-grow: 1;
-  align-items: center;
-}
+
 
 .fixed-bottom, .fixed-top {
   position: fixed;
@@ -207,4 +213,5 @@ a:-webkit-any-link {
   height: 30px;
 
 }
+
 </style>
