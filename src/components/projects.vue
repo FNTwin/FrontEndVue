@@ -1,6 +1,6 @@
 <template>
   <div class="container_all" id="test">
-    <div class="container2">
+    <div class="container2" :style="this.color_main">
       <div class="image_container">
         <div :style="darkproject" class="holder2">
           <img alt="N16" class="img-rounded" src="@/assets/n16.png" @click="showModal2">
@@ -31,7 +31,7 @@
           <img alt="Defects" class="img-rounded"
                src="@/assets/file/defects.png" @click="showModal3">
           <div class="cont">
-            <b-modal id="Defectsmodal" ref="my-modal3" :class="modal"
+            <b-modal id="Defectsmodal" ref="my-modal3" :class="modal-content"
                      hide-backdrop hide-footer title="Classification of defects on hot-rolled steel">
               <div class="d-block text-center">
                 <h3> Developed a CNN with Tensorflow to detect and classify
@@ -51,7 +51,7 @@
             <div class="gp">
             </div>
             <b-modal id="GPGOmodal" ref="my-modal"
-                     :class="model"
+                     :class="modal-content"
                      hide-backdrop hide-footer title="GPGO" :style="mod">
               <div class="d-block text-center">
                 <h3> Bayesian Optimization framework based on Gaussian processes.
@@ -123,6 +123,17 @@ export default {
     },
     dataplot() {
       return this.test
+    },
+    color_main() {
+      if (this.night) {
+        return {
+          "background": "#201F20",
+          "color": "#A6A4A6",
+          "transition": ".3s ease-in-out"
+        };
+      } else {
+        return {}
+      }
     }
   }
 }
@@ -131,11 +142,14 @@ export default {
 <style scoped>
 
 .container2 {
+  position: relative;
   max-width: 100%;
   display: flex;
   align-content: center;
   justify-content: center;
   height: 30vw;
+  background: #F2EFEB;
+  transition: .3s ease-in-out;
 }
 
 .image_container {
@@ -211,8 +225,8 @@ h3 {
   font-weight: bold;
 }
 
-.modal-content {
-  background: blue;
+#GPGOmodal {
+  background-color: blue;
 }
 
 

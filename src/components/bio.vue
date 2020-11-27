@@ -265,6 +265,7 @@ export default {
   animation: typing 1.3s steps(21, end),
   blink-caret 0.9s step-end infinite;
 
+  position: relative; /* new */
 }
 
 .aboutme {
@@ -290,6 +291,7 @@ export default {
 
 .tldrme {
   display: flex;
+  position: relative;
   flex-direction: column;
   width: 90%;
   padding: 2vw;
