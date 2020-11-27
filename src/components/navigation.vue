@@ -3,8 +3,8 @@
     <nav class="navbar navbar-expand-lg fixed-top primary-nav container" :style="color_nav">
       <div class="cont_navbar">
       <button class=" btn btn-layered offset square" @click="dark" :style="color">
-        FNTwin
-
+        <i :class="this.moon[this.darkMode]" :style="icons"></i>
+        {{this.mode[this.darkMode]}}
       </button>
       <!--<a aria-current="page" class="btn btn-layered offset square" role="button" href="/" style="text-decoration:none;">FNTwin</a>-->
       <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -13,14 +13,31 @@
       </button>-->
       <div class="collapse navbar-collapse" id="navbar">
         <div class="navbar-nav align-items-center ml-auto">
-          <a class="btn btn-layered offset square" role="button" href="https://github.com/FNTwin" style="text-decoration:none;" target="__blank"  :style="color">Github</a>
+          <a class="btn btn-layered offset square" role="button"
+             href="https://github.com/FNTwin" style="text-decoration:none;"
+             target="__blank"
+             :style="color"><i class="fab fa-github fa-lg"></i></a>
         </div>
-        <a :href="`${publicPath}CG_Resume.pdf`" class="btn btn-layered offset square" role="button" aria-pressed="true" style="text-decoration:none;"  :style="color" target="_blank">CV</a>
+        
+        <a :href="`${publicPath}CG_Resume.pdf`"
+           class="btn btn-layered offset square"
+           role="button" aria-pressed="true" style="text-decoration:none;"
+           :style="color" target="_blank">
+          <i class="fas fa-file fa-lg"></i> CV</a>
+
         <a href="mailto:cris.gabellini@gmail.com"
-           class="btn btn-layered offset square" role="button"
+           class="btn btn-layered offset square mailbutton"
+           role="button"
            aria-pressed="true"
            style="text-decoration:none;"  :style="color"
-           @click="displaymail"> {{this.email[mailmessage]}}</a>
+           @click="displaymail"
+           @mouseover="hovermailIN"
+           @mouseout="hovermailOUT">
+          <!--<i class="fas fa-envelope fa-lg"></i>
+           {{this.email[mailmessage]}}</a>-->
+            <i :class="this.mailicon[this.click]"></i>
+            Hire me!</a>
+
       </div>
       </div>
     </nav>
@@ -39,7 +56,20 @@ export default {
         "false" : "Email me",
         "true" : "cris.gabellini@gmail.com"
       },
-      mailmessage : false
+      mailmessage : false,
+      click: false,
+      moon: {
+        "false":"fas fa-moon",
+        "true": "fas fa-lightbulb fa-lg"
+      },
+      mailicon: {
+        "false":"fas fa-envelope fa-lg",
+        "true": "fas fa-envelope-open fa-lg"
+      },
+      mode: {
+        "false":" Dark",
+        "true": " Light"
+      }
     }
   },
   computed:{
@@ -76,7 +106,17 @@ export default {
       this.$root.$emit("toggle-dark")
     },
     displaymail(){
-      this.mailmessage = !this.mailmessage
+      //this.mailmessage = true;
+      this.click=true;
+      //Change letter to click
+    },
+    hovermailIN(){
+      this.mailmessage = true;
+    },
+    hovermailOUT(){
+      if (this.click === false){
+        this.mailmessage=false;
+      }
     }
   }
 }
@@ -210,20 +250,5 @@ a:-webkit-any-link {
   text-decoration: underline;
 }
 
-.nightmode{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-
-}
-
-.nightmode_image{
-
-  width: 30px;
-  height: 30px;
-
-}
 
 </style>
