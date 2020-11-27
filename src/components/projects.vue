@@ -1,73 +1,73 @@
 <template>
   <div class="container_all" id="test">
     <div class="container2">
-    <div class="image_container">
-      <div :style="darkproject" class="holder2">
-        <img alt="N16" class="img-rounded" src="@/assets/n16.png" @click="showModal2" >
-        <div class="cont">
-          <div class="centrare">
-          <b-modal id="N16modal modal-content modal-body modal-header"
-                   ref="my-modal2"
-                   :class="modal-content"
-                   hide-backdrop  hide-footer
-                   title="Dissipative Particle Dynamics Optimization">
-            <div class="d-block text-center">
-              <h3>Derivation of the DPD interaction parameters
-            for a coarse-grained simulation of a nanoparticle grafted by polymers by using a novel
-            bayesian optimization approach exploiting
-            structural insights from atomistic simulations.
-            <br><br></h3>
-              <img class="img-rounded"  src="@/assets/n16gif.gif">
-              <img class="img-rounded"  src="@/assets/aa_rdf.png">
-              <img class="img-rounded"  src="@/assets/N16_BS1.png">
-              <img class="img-rounded"  src="@/assets/file/ch_system.png">
-              <img class="img-rounded"  src="@/assets/file/N16b.png" >
+      <div class="image_container">
+        <div :style="darkproject" class="holder2">
+          <img alt="N16" class="img-rounded" src="@/assets/n16.png" @click="showModal2">
+          <div class="cont">
+            <div class="centrare">
+              <b-modal id="N16modal modal-content modal-body modal-header"
+                       ref="my-modal2"
+                       :class="modal-content"
+                       hide-backdrop hide-footer
+                       title="Dissipative Particle Dynamics Optimization">
+                <div class="d-block text-center">
+                  <h3>Derivation of the DPD interaction parameters
+                    for a coarse-grained simulation of a nanoparticle grafted by polymers by using a novel
+                    bayesian optimization approach exploiting
+                    structural insights from atomistic simulations.
+                    <br><br></h3>
+                  <img class="img-rounded" src="@/assets/n16gif.gif">
+                  <img class="img-rounded" src="@/assets/aa_rdf.png">
+                  <img class="img-rounded" src="@/assets/N16_BS1.png">
+                  <img class="img-rounded" src="@/assets/file/ch_system.png">
+                  <img class="img-rounded" src="@/assets/file/N16b.png">
+                </div>
+              </b-modal>
             </div>
-          </b-modal>
+          </div>
+        </div>
+        <div :style="darkproject" class="holder2">
+          <img alt="Defects" class="img-rounded"
+               src="@/assets/file/defects.png" @click="showModal3">
+          <div class="cont">
+            <b-modal id="Defectsmodal" ref="my-modal3" :class="modal"
+                     hide-backdrop hide-footer title="Classification of defects on hot-rolled steel">
+              <div class="d-block text-center">
+                <h3> Developed a CNN with Tensorflow to detect and classify
+                  images of surface defects on hot-rolled steel.
+                  Different topologies and hyperparameters were studied
+                  to improve the accuracy of the NN.
+                  <br><br></h3>
+                <img class="img-rounded" src="@/assets/file/defects.png" width="100%">
+              </div>
+            </b-modal>
+          </div>
+        </div>
+        <div :style="darkproject" class="holder2">
+          <img alt="Gaussian Process" class="img-rounded"
+               src="@/assets/gp.png" @click="showModal">
+          <div class="cont">
+            <div class="gp">
+            </div>
+            <b-modal id="GPGOmodal" ref="my-modal"
+                     :class="model"
+                     hide-backdrop hide-footer title="GPGO" :style="mod">
+              <div class="d-block text-center">
+                <h3> Bayesian Optimization framework based on Gaussian processes.
+                  Hyperparameters tuned by kernel's gradient information and numerical
+                  solvers. Implementation of various acquisition
+                  functions and different numerical solvers to achieve a
+                  convergence on high dimensional problems.
+                </h3>
+                <img class="img-rounded" src="@/assets/gp.png" width="100%">
+                <img class="img-rounded" src="@/assets/gold_2_mean.png" width="100%">
+                <img class="img-rounded" src="@/assets/bay.png" width="70%">
+              </div>
+            </b-modal>
           </div>
         </div>
       </div>
-      <div :style="darkproject" class="holder2" >
-        <img alt="Defects" class="img-rounded"
-             src="@/assets/file/defects.png" @click="showModal3" >
-        <div class="cont">
-          <b-modal  id="Defectsmodal" ref="my-modal3" :class="modal"
-                    hide-backdrop hide-footer title="Classification of defects on hot-rolled steel">
-            <div class="d-block text-center">
-              <h3> Developed a CNN with Tensorflow to detect and classify
-            images of surface defects on hot-rolled steel.
-            Different topologies and hyperparameters were studied
-            to improve the accuracy of the NN.
-            <br><br></h3>
-              <img class="img-rounded"  src="@/assets/file/defects.png" width="100%">
-            </div>
-          </b-modal>
-        </div>
-      </div>
-      <div :style="darkproject" class="holder2">
-        <img alt="Gaussian Process" class="img-rounded"
-             src="@/assets/gp.png" @click="showModal" >
-        <div class="cont">
-          <div class="gp">
-          </div>
-          <b-modal id="GPGOmodal" ref="my-modal"
-                   :class="model"
-                   hide-backdrop hide-footer title="GPGO" :style="mod">
-            <div class="d-block text-center">
-              <h3> Bayesian Optimization framework based on Gaussian processes.
-            Hyperparameters tuned by kernel's gradient information and numerical
-            solvers. Implementation of various acquisition
-            functions and different numerical solvers to achieve a
-            convergence on high dimensional problems.
-          </h3>
-              <img class="img-rounded"  src="@/assets/gp.png" width="100%">
-              <img class="img-rounded"  src="@/assets/gold_2_mean.png" width="100%">
-              <img class="img-rounded"  src="@/assets/bay.png" width="70%">
-            </div>
-          </b-modal>
-        </div>
-      </div>
-    </div>
     </div>
   </div>
 </template>
@@ -76,14 +76,14 @@
 
 export default {
   name: "projects",
-  data(){
+  data() {
     return {
       publicPath: process.env.BASE_URL,
       night: false
     }
   },
-  mounted(){
-    this.$root.$on("toggle-dark" , this.switch);
+  mounted() {
+    this.$root.$on("toggle-dark", this.switch);
   },
   methods: {
     showModal() {
@@ -99,29 +99,29 @@ export default {
       this.night = !this.night
     }
   },
-  computed:{
-    darkproject(){
-      if (this.night){
+  computed: {
+    darkproject() {
+      if (this.night) {
         return {
           "background": "#403D40",
           "box-shadow": "0.2em 0.1em 0 0 #1F0934",
           "transition": ".3s ease-in-out"
 
         };
-      } else{
+      } else {
         return {}
       }
     },
-    mod(){
-      if (this.night){
+    mod() {
+      if (this.night) {
         return {
           "background": "#403D40"
         };
-      } else{
+      } else {
         return {}
       }
     },
-    dataplot(){
+    dataplot() {
       return this.test
     }
   }
@@ -130,14 +130,15 @@ export default {
 
 <style scoped>
 
-.container2{
+.container2 {
   max-width: 100%;
-  display:flex;
+  display: flex;
   align-content: center;
   justify-content: center;
   height: 30vw;
 }
-.image_container{
+
+.image_container {
   display: flex;
   flex-direction: row;
   padding-bottom: 5%;
@@ -148,9 +149,9 @@ export default {
 
 
 .holder2 {
-  display: flex!important;
+  display: flex !important;
   background: #D9D7D3;
-  box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.2);
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.2);
   transition: 0.1s;
   width: 26vw;
   height: 26vw;
@@ -167,7 +168,7 @@ export default {
 
 }
 
-.holder2:hover{
+.holder2:hover {
   opacity: 0.6;
   transition: 0.3s;
 }
@@ -180,9 +181,10 @@ export default {
   width: 90%;
   align-self: center;
 }
-.explanation{
+
+.explanation {
   font-size: 12pt;
-  font-family: CircularStd,sans-serif;
+  font-family: CircularStd, sans-serif;
   font-weight: 30;
   color: #333234;
 }
@@ -209,7 +211,7 @@ h3 {
   font-weight: bold;
 }
 
-.modal-content{
+.modal-content {
   background: blue;
 }
 
