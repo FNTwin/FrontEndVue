@@ -141,7 +141,6 @@ export default {
 <style scoped>
 
 .container2 {
-  position: relative;
   max-width: 100%;
   display: flex;
   align-content: center;
@@ -222,10 +221,6 @@ h3 {
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   font-weight: bold;
-}
-
-#GPGOmodal {
-  background-color: blue;
 }
 
 

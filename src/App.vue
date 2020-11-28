@@ -119,12 +119,6 @@ export default {
   height: 100vh;
 }
 
-
-.prima {
-  padding-top: 4vh;
-}
-
-
 #particles-js {
   background-size: cover;
   position: absolute;
