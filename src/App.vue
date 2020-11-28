@@ -5,7 +5,7 @@
     <vue-particles color="#000000"
                    :particleOpacity="0.7"
                    :particlesNumber="90"
-                   shapeType="edge"
+                   shapeType="circle"
                    :particleSize="4"
                    linesColor="#000000"
                    :linesWidth="1"
