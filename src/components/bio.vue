@@ -261,7 +261,7 @@ export default {
 .nametitle {
   width: 90%;
   display: inline;
-  border-right: min(8vw, 1.5em) solid orange;
+  border-right: min(2em, 8vw) solid orange;
   animation: typing 1.3s steps(21, end),
   blink-caret 0.9s step-end infinite;
 
