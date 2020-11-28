@@ -73,7 +73,6 @@
 </template>
 
 <script>
-
 export default {
   name: "projects",
   data() {
