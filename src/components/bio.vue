@@ -260,7 +260,6 @@ export default {
 
 .nametitle {
   width: 90%;
-  padding-top: 4vh;
   display: inline;
   border-right: min(2em, 8vw) solid orange;
   animation: typing 1.3s steps(21, end),
