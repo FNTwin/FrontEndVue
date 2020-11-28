@@ -2,46 +2,44 @@
   <div id="app" :style="color_main">
     <vue-headful title="Cristian Gabellini Homepage"
                  description="Personal site of Cristian Gabellini"/>
-    <vue-particles color="#000000"
-                   :particleOpacity="0.7"
-                   :particlesNumber="90"
-                   shapeType="circle"
-                   :particleSize="4"
-                   linesColor="#000000"
-                   :linesWidth="1"
-                   :lineLinked="true"
-                   :lineOpacity="0.4"
-                   :linesDistance="150"
-                   :moveSpeed="0.7"
-                   :hoverEffect="true"
-                   hoverMode="grab"
-                   :clickEffect="true"
-                   clickMode="push" v-if="!this.isDarkMode"></vue-particles>
-
-    <vue-particles color="#B87324"
-                   :particleOpacity="0.7"
-                   :particlesNumber="90"
-                   shapeType="circle"
-                   :particleSize="4"
-                   linesColor="#B87324"
-                   :linesWidth="1"
-                   :lineLinked="true"
-                   :lineOpacity="0.4"
-                   :linesDistance="150"
-                   :moveSpeed="0.7"
-                   :hoverEffect="true"
-                   hoverMode="grab"
-                   :clickEffect="true"
-                   :key="componentKey"
-                   clickMode="push" v-if="this.isDarkMode"></vue-particles>
 
 
     <div class="container_princ">
       <navigation @toggle-dark="toggleDarkMode"/>
       <div class="prima">
+        <vue-particles color="#000000"
+                       :particleOpacity="0.7"
+                       :particlesNumber="90"
+                       shapeType="circle"
+                       :particleSize="4"
+                       linesColor="#000000"
+                       :linesWidth="1"
+                       :lineLinked="true"
+                       :lineOpacity="0.4"
+                       :linesDistance="150"
+                       :moveSpeed="0.7"
+                       :hoverEffect="true"
+                       hoverMode="grab"
+                       :clickEffect="true"
+                       clickMode="push" v-if="!this.isDarkMode"></vue-particles>
+
+        <vue-particles color="#B87324"
+                       :particleOpacity="0.7"
+                       :particlesNumber="90"
+                       shapeType="circle"
+                       :particleSize="4"
+                       linesColor="#B87324"
+                       :linesWidth="1"
+                       :lineLinked="true"
+                       :lineOpacity="0.4"
+                       :linesDistance="150"
+                       :moveSpeed="0.7"
+                       :hoverEffect="true"
+                       hoverMode="grab"
+                       :clickEffect="true"
+                       :key="componentKey"
+                       clickMode="push" v-if="this.isDarkMode"></vue-particles>
         <bio/>
-      </div>
-      <div class="seconda">
         <projects/>
       </div>
     </div>
@@ -109,6 +107,7 @@ export default {
   background: #F2EFEB;
   /*background-image: url("../src/assets/triangles_light.png");*/
   transition: .3s ease-in-out;
+
 }
 
 .container_princ {
@@ -116,23 +115,24 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100vh;
-}
+  height: auto;
 
+}
 
 .prima {
   padding-top: 4vh;
 }
 
-.seconda{
-}
-
 #particles-js {
   background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+
 }
 </style>

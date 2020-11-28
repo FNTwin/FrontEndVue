@@ -1,6 +1,7 @@
 <template>
   <div class="container_all" id="test">
-    <div class="container2" :style="this.color_main">
+    <!--<div class="container2" :style="this.color_main">-->
+    <div class="container2">
       <div class="image_container">
         <div :style="darkproject" class="holder2">
           <img alt="N16" class="img-rounded" src="@/assets/n16.png" @click="showModal2">
@@ -146,7 +147,6 @@ export default {
   align-content: center;
   justify-content: center;
   height: auto;
-  background: #F2EFEB;
   transition: .3s ease-in-out;
 }
 
