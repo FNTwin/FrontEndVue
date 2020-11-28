@@ -128,7 +128,7 @@ export default {
   -moz-background-size: cover;
   -webkit-background-size: cover;
   -o-background-size: cover;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
