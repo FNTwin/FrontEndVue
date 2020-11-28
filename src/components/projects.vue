@@ -146,7 +146,7 @@ export default {
   display: flex;
   align-content: center;
   justify-content: center;
-  height: 30vw;
+  height: auto;
   background: #F2EFEB;
   transition: .3s ease-in-out;
 }

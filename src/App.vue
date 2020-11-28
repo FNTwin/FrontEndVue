@@ -5,7 +5,7 @@
     <vue-particles color="#000000"
                    :particleOpacity="0.7"
                    :particlesNumber="90"
-                   shapeType="circle"
+                   shapeType="edge"
                    :particleSize="4"
                    linesColor="#000000"
                    :linesWidth="1"
@@ -124,9 +124,6 @@ export default {
   padding-top: 4vh;
 }
 
-.seconda{
-  height: 100%;
-}
 
 #particles-js {
   background-size: cover;
