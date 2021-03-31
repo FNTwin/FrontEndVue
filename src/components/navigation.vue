@@ -41,7 +41,7 @@
             <!--<i class="fas fa-envelope fa-lg"></i>
              {{this.email[mailmessage]}}</a>-->
             <i :class="this.mailicon[this.mailmessage]"></i>
-            Hire me!</a>
+            Mail me!</a>
 
         </div>
       </div>
