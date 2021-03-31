@@ -83,7 +83,7 @@ export default {
         "Cristian.gabbo": "\"This guy owes us an elevator\"",
         "Cristian.location": "\"Gorizia (GO), Italy\"",
         "Cristian.aboutMe": "\"Just a guy with a burning passion for machine learning and the microscopic world." +
-            " I focus my studied on multiscale modelling techniques with machine learning approaches\"",
+            " I focused my studies on multiscale modelling techniques with machine learning approaches\"",
         "Cristian.simulations": "[\"Ab-initio\", \"All-Atoms\", \"Coarse-graining DPD\"]",
         "Cristian.interests": "[\"Skateboard\", \"Snowboard\", \"Programming\", \"Computation\", \"Videogames\"]",
         "Cristian.esport": "\"Professional Call of Duty and Overwatch player\"",

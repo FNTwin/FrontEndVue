@@ -19,6 +19,11 @@
                :style="color"><i class="fab fa-github fa-lg"></i></a>
           </div>
 
+          <a class="btn btn-layered offset square" role="button"
+             href="https://fntwin.github.io/blog/" style="text-decoration:none;"
+             target="__blank"
+             :style="color">Blog</a>
+
           <a :href="`${publicPath}CG_Resume.pdf`"
              class="btn btn-layered offset square"
              role="button" aria-pressed="true" style="text-decoration:none;"
