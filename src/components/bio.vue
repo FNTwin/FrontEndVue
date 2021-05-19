@@ -6,7 +6,8 @@
     </div>
     <h2 class="tldr">
       Computational Material Engineer specialized in multiscale simulations
-      and Machine Learning.
+      and Machine Learning. <br>
+      Researcher in molecular simulations at University of Trieste.
     </h2>
     <div class="tldrme" :style="tldrmedark" ref="scroll">
       <div class="aboutmetext" :style="aboutmedark">
@@ -72,24 +73,25 @@ export default {
       options: {
         "clear": "",
         "Cristian.education": "[\"Bachelor's degree in Industrial Engineering\", \"Master's degree in Material Engineering\"]",
-        "Cristian.languages": "[\"Python\", \"C++\", \"HTML/CSS\", \"Javascript\", \"Flask\", \"FastAPI\", \"Vue.js\"]",
-        "Cristian.packages": "[\"Numpy\", \"SciPy\", \"Pandas\", \"Matplotlib\", \"Tensorflow\", \"scikit-learn\", \"OpenCV\", \"MDanalysis\"]",
+        "Cristian.languages": "[\"Python\", \"C++\", \"Fortran\",  \"HTML/CSS\", \"Javascript\"]",
+        "Cristian.packages": "[\"Numpy\", \"SciPy\", \"Pandas\", \"Matplotlib\", \"PyTorch\", \"Tensorflow\", \"scikit-learn\",  \"MDanalysis\" ," +
+            "\"Flask\", \"FastAPI\"]",
         "Cristian.databases": "[\"MySQL\", \"MongoDB\"]",
-        "Cristian.various": "[\"GIT\", \"Unit testing\"]",
+        "Cristian.various": "[\"GIT\", \"Bash\", \"Jupyter\", \"Unit testing\"]",
         "Cristian.corva": "\"Stop making me do frontend please\"",
         "Cristian.email": "\"cris.gabellini@gmail.com\"",
         "Cristian.ml": "[\"Gaussian Processes\", " +
             "\"Bayesian Optimization\", \"Deep Learning\"]",
         "Cristian.gabbo": "\"This guy owes us an elevator\"",
         "Cristian.location": "\"Gorizia (GO), Italy\"",
-        "Cristian.aboutMe": "\"Just a guy with a burning passion for machine learning and the microscopic world." +
-            " I focused my studies on multiscale modelling techniques with machine learning approaches\"",
-        "Cristian.simulations": "[\"Ab-initio\", \"All-Atoms\", \"Coarse-graining DPD\"]",
+        "Cristian.aboutMe": "\"Just a guy with a passion for machine learning and for numerical modeling of materials." +
+            " I focused my studies on multiscale modelling techniques and still try to make them better by using new machine learning approaches\"",
+        "Cristian.simulations": "[\"Ab-initio\", \"All-Atoms\", \"Coarse-graining DPD and BD\"]",
         "Cristian.interests": "[\"Skateboard\", \"Snowboard\", \"Programming\", \"Computation\", \"Videogames\"]",
         "Cristian.esport": "\"Professional Call of Duty and Overwatch player\"",
-        "Cristian.simulationSoftware": "[\"Quantum-espresso\", \"Amber\", \"LAMMPS\", \"DigiMat\"]",
+        "Cristian.simulationSoftwares": "[\"Quantum-espresso\", \"Amber\", \"LAMMPS\", \"GROMACS\", \"DigiMat\"]",
         "help": "Cristian.esport Cristian.email Cristian.ml Cristian.gabbo Cristian.corva Cristian.location" +
-            " Cristian.aboutMe Cristian.interests Cristian.simulations Cristian.simulationSoftware" +
+            " Cristian.aboutMe Cristian.interests Cristian.simulations Cristian.simulationSoftwares" +
             " Cristian.education Cristian.languages Cristian.packages Cristian.databases Cristian.various clear"
       },
     }
@@ -274,7 +276,7 @@ export default {
   height: 25px;
   width: auto;
   padding-left: 8px;
-  margin-bottom: 2vh;
+  margin-bottom: 1vh;
   background-color: #e4e3e5;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -301,7 +303,8 @@ export default {
 
 .aboutmetext {
   width: 100%;
-  min-height: 45vh;
+  height:auto;
+  min-height: 30vh;
   margin: auto;
   background: #201E21;
   border-radius: 10px;
@@ -312,7 +315,7 @@ export default {
 
 .scrolltext {
   overflow: auto;
-  max-height: 45vh;
+  max-height: 26vh;
   display: flex;
   flex-direction: column-reverse;
 }

@@ -41,6 +41,9 @@
                        clickMode="push" v-if="this.isDarkMode"></vue-particles>
         <bio/>
         <projects/>
+
+        <jobs/>
+
       </div>
     </div>
 
@@ -51,6 +54,7 @@
 import navigation from "@/components/navigation";
 import bio from "@/components/bio";
 import projects from "@/components/projects";
+import jobs from "@/components/jobs";
 
 
 export default {
@@ -64,7 +68,8 @@ export default {
   components: {
     navigation,
     bio,
-    projects
+    projects,
+    jobs
   },
   methods: {
     toggleDarkMode() {
