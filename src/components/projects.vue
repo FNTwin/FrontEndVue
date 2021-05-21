@@ -263,7 +263,7 @@ export default {
   box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.2);
   transition: 0.1s;
   width: 60%;
-  height: 8vh;
+  height: 100%;
   border: 1.5px solid black;
   position: relative;
   border-radius: 2px;
