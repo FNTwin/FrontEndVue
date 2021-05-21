@@ -304,7 +304,7 @@ export default {
 .aboutmetext {
   width: 100%;
   height:auto;
-  min-height: 30vh;
+  min-height: 40vh;
   margin: auto;
   background: #201E21;
   border-radius: 10px;
@@ -315,7 +315,7 @@ export default {
 
 .scrolltext {
   overflow: auto;
-  max-height: 26vh;
+  max-height: 36vh;
   display: flex;
   flex-direction: column-reverse;
 }

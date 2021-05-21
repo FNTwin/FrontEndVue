@@ -134,7 +134,7 @@
             <div class="d-block text-center">
               <h3> Implementation and training in Pytorch of a Generative Adversarial
                 Network and a Conditional Generative Adversial Network on the
-                standard MNIST dataset. The CGAN implemtation was done to
+                standard MNIST dataset. The CGAN implementation was done to
                 improve the latent space of the GAN.
 
                 <img class="img-rounded" src="@/assets/g1.jpg" width="100%">
@@ -263,9 +263,7 @@ export default {
   box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.2);
   transition: 0.1s;
   width: 60%;
-  height: 7vh;
-  max-width: 1000px;
-  max-height: 460px;
+  height: 8vh;
   border: 1.5px solid black;
   position: relative;
   border-radius: 2px;

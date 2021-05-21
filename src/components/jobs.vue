@@ -187,8 +187,6 @@ export default {
   transition: 0.1s;
   width: 80%;
   height: 10vh;
-  max-width: 1000px;
-  max-height: 460px;
   border: 2px solid black;
   position: relative;
   border-radius: 8px;
