@@ -7,7 +7,7 @@
         <button :style="darkproject" class="holder2"
                 @click="showModal6">
           <h1 :style="correctcolor">Brownian Dynamics Optimization</h1>
-          <h2 :style="correctcolor">Python, Bash, LAMMPS</h2>
+          <h2 :style="correctcolor">Python, Fortran, Bash, LAMMPS</h2>
         </button>
         <div class="cont">
           <div class="gp">

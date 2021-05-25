@@ -18,6 +18,7 @@
             <div class="holder3" :style="darkcircle"></div>
             <div class="verticalline" :style="darkline"></div>
           </div>
+
           <div class="contdot">
             <div class="holder3" :style="darkcircle"></div>
           </div>
@@ -25,25 +26,11 @@
 
         </div>
         <div class="jobs">
-          <div class="holder2" :style="darkproject">
-            <h1 class="headerjob">Researcher | 01/2021 - Now</h1>
-            <h3>University of Trieste<br>
-            Computational models of a variety of SAM-AuNPs<br>
-            Machine Learning on atomistic and coarse grain simulations</h3>
+          <div class="holder2" :style="darkproject" v-for="jobs in jobarray" :key="jobs.job">
+            <h1 class="headerjob">{{ jobs.job }} | {{jobs.date}}</h1>
+            <h3>{{jobs.place}}</h3>
+            <h3 v-html="jobs.explanation"></h3>
           </div>
-          <div class="holder2" :style="darkproject">
-            <h1 class="headerjob">Research | 02/2020 - 05/2020</h1>
-            <h3>University of Jan Evangelista (UJEP)<br>
-            Machine Learning for nanomaterials simulations<br>
-            Atomistic and coarse grain simulations</h3>
-          </div>
-          <div class="holder2" :style="darkproject">
-            <h1 class="headerjob">Technical system engineer  </h1>
-            <h3>Internship - Fincantieri S.p.A.<br>
-            Designed and implemented new routines for parametric modeling<br>
-            Developed internal procedures to decrease man-hours on modeling</h3>
-          </div>
-
         </div>
 
 
@@ -59,6 +46,29 @@ export default {
   data() {
     return {
       publicPath: process.env.BASE_URL,
+      jobarray: [
+        {
+          "job" : "Researcher",
+          "date" : "01/2021-Now",
+          "place" : "University of Trieste (UNITS)" ,
+          "explanation": "Computational models of a variety of SAM-AuNPs<br>" +
+              "Machine Learning on atomistic and coarse grain simulations"
+        },
+        {
+          "job" : "Research" ,
+          "date" : "02/2020-05/2020",
+          "place" : "University of Jan Evangelista (UJEP)",
+          "explanation": "Machine Learning for nanomaterials simulations<br>" +
+              "Atomistic and coarse grain simulations"
+        },
+        {
+          "job" : "Technical system engineer",
+          "date" : "09/2019-12/2019",
+          "place" : "Internship - Fincantieri S.p.A.",
+          "explanation": "Designed and implemented new routines for parametric modeling<br>" +
+              "Developed internal procedures to decrease man-hours on modeling"
+        }
+      ],
       night: false
     }
   },
@@ -185,7 +195,7 @@ export default {
   background: #D9D7D3;
   box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.2);
   transition: 0.1s;
-  width: 80%;
+  width: 90%;
   height: 30%;
   border: 2px solid black;
   position: relative;
@@ -266,18 +276,22 @@ h1 {
 }
 
 .headerjob{
-  font-size: min(3vw, 2em);
-  letter-spacing: .1em;
+  font-size: min(2vw, 1.5em);
+  letter-spacing: .05em;
   padding-left: 4px;
   padding-top: 2px;
+  margin-top: 7px;
+}
+
+h1{
+  text-align:justify;
+  white-space:nowrap;
 }
 
 h2 {
   display: block;
-  margin-top: auto;
-  font-size: min(2.5vw, 1.2em);
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
+  font-size: min(2vw, 1.2em);
+
   margin-left: 1vw;
   font-weight: bold;
   color: #252225;
@@ -288,9 +302,11 @@ h2 {
 h3 {
   display: block;
   font-size: min(1vh,2.2vw);
+  text-align:justify;
   font-weight: normal;
   padding-left: 4px;
   line-height: 1.1em;
+  padding-right: 4px;
 }
 
 
