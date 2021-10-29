@@ -1,8 +1,15 @@
 <template>
   <div class="container_navbar" id="navigation">
-    <nav class="navbar navbar-expand-lg fixed-top primary-nav container" :style="color_nav">
+    <nav
+      class="navbar navbar-expand-lg fixed-top primary-nav container"
+      :style="color_nav"
+    >
       <div class="cont_navbar">
-        <button class=" btn btn-layered offset square" @click="dark" :style="color">
+        <button
+          class="btn btn-layered offset square"
+          @click="dark"
+          :style="color"
+        >
           <i :class="this.moon[this.darkMode]" :style="icons"></i>
           {{ this.mode[this.darkMode] }}
         </button>
@@ -13,36 +20,55 @@
         </button>-->
         <div class="collapse navbar-collapse" id="navbar">
           <div class="navbar-nav align-items-center ml-auto">
-            <a class="btn btn-layered offset square" role="button"
-               href="https://github.com/FNTwin" style="text-decoration:none;"
-               target="__blank"
-               :style="color"><i class="fab fa-github fa-lg"></i></a>
+            <a
+              class="btn btn-layered offset square"
+              role="button"
+              href="https://github.com/FNTwin"
+              style="text-decoration: none"
+              target="__blank"
+              :style="color"
+              ><i class="fab fa-github fa-lg"></i
+            ></a>
           </div>
 
-          <a class="btn btn-layered offset square" role="button"
-             href="https://fntwin.github.io/blog/" style="text-decoration:none;"
-             target="__blank"
-             :style="color">Blog</a>
+          <a
+            class="btn btn-layered offset square"
+            role="button"
+            href="https://fntwin.github.io/blog/"
+            style="text-decoration: none"
+            target="__blank"
+            :style="color"
+            >Blog</a
+          >
 
-          <a :href="`${publicPath}CG_Resume.pdf`"
-             class="btn btn-layered offset square"
-             role="button" aria-pressed="true" style="text-decoration:none;"
-             :style="color" target="_blank">
-            <i class="fas fa-file fa-lg"></i> CV</a>
+          <a
+            :href="`${publicPath}CG_Resume.pdf`"
+            class="btn btn-layered offset square"
+            role="button"
+            aria-pressed="true"
+            style="text-decoration: none"
+            :style="color"
+            target="_blank"
+          >
+            <i class="fas fa-file fa-lg"></i> CV</a
+          >
 
-          <a href="mailto:cris.gabellini@gmail.com"
-             class="btn btn-layered offset square mailbutton"
-             role="button"
-             aria-pressed="true"
-             style="text-decoration:none;" :style="color"
-             @click="displaymail"
-             @mouseover="hovermailIN"
-             @mouseout="hovermailOUT">
+          <a
+            href="mailto:cris.gabellini@gmail.com"
+            class="btn btn-layered offset square mailbutton"
+            role="button"
+            aria-pressed="true"
+            style="text-decoration: none"
+            :style="color"
+            @click="displaymail"
+            @mouseover="hovermailIN"
+            @mouseout="hovermailOUT"
+          >
             <!--<i class="fas fa-envelope fa-lg"></i>
              {{this.email[mailmessage]}}</a>-->
             <i :class="this.mailicon[this.mailmessage]"></i>
-            Mail me!</a>
-
+            Mail me!</a
+          >
         </div>
       </div>
     </nav>
@@ -50,66 +76,63 @@
 </template>
 
 <script>
-
 export default {
-  name: 'navigation_bar',
+  name: "navigation_bar",
   data() {
     return {
       publicPath: process.env.BASE_URL,
       darkMode: false,
       email: {
-        "false": "Email me",
-        "true": "cris.gabellini@gmail.com"
+        false: "Email me",
+        true: "cris.gabellini@gmail.com",
       },
       mailmessage: false,
       click: false,
       moon: {
-        "false": "fas fa-moon",
-        "true": "fas fa-lightbulb fa-lg"
+        false: "fas fa-moon",
+        true: "fas fa-lightbulb fa-lg",
       },
       mailicon: {
-        "false": "fas fa-envelope fa-lg",
-        "true": "fas fa-envelope-open fa-lg"
+        false: "fas fa-envelope fa-lg",
+        true: "fas fa-envelope-open fa-lg",
       },
       mode: {
-        "false": " Dark",
-        "true": " Light"
-      }
-    }
+        false: " Dark",
+        true: " Light",
+      },
+    };
   },
   computed: {
     color() {
       if (this.darkMode) {
         return {
-          "color": "#8F3E8F!important",
-          "background": "#403D40",
-          "transition": ".3s ease-in-out"
+          color: "#8F3E8F!important",
+          background: "#403D40",
+          transition: ".3s ease-in-out",
         };
       } else {
-        return {}
+        return {};
       }
     },
     color_nav() {
       if (this.darkMode) {
         return {
           //"background": "#332A35"
-          "background": "#201F20"
+          background: "#201F20",
         };
       } else {
-        return {}
+        return {};
       }
-    }
+    },
   },
   watch: {
-    darkMode() {
-
-    }
+    darkMode() {},
   },
   methods: {
     dark() {
       this.darkMode = !this.darkMode;
       this.$emit("toggle-dark");
-      this.$root.$emit("toggle-dark")
+      this.$root.$emit("toggle-dark");
     },
     displaymail() {
       this.mailmessage = true;
@@ -123,25 +146,21 @@ export default {
       if (this.click) {
         this.mailmessage = false;
       }
-    }
-  }
-}
-
-
+    },
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
 .container {
-
   max-width: 100%;
   border-bottom: 2px solid black;
-  background: #D9D7D3;
+  background: #d9d7d3;
   margin-right: auto;
   margin-left: auto;
   height: 4.1rem;
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .cont_navbar {
@@ -159,9 +178,7 @@ export default {
   right: 0;
   left: 0;
   z-index: 1030;
-
 }
-
 
 .navbar-expand-lg .navbar-collapse {
   display: flex !important;
@@ -170,13 +187,12 @@ export default {
   position: sticky;
 }
 
-
 .collapse:not(.show) {
   display: none;
 }
 
-
-.fixed-bottom, .fixed-top {
+.fixed-bottom,
+.fixed-top {
   position: fixed;
   right: 0;
   left: 0;
@@ -187,13 +203,14 @@ export default {
   top: 0;
 }
 
-*, :after, :before {
+*,
+:after,
+:before {
   box-sizing: border-box;
 }
 
 div {
   display: block;
-
 }
 
 .primary-nav {
@@ -212,26 +229,26 @@ div {
 }
 
 .offset {
-  box-shadow: 0.4em 0.3em 0 0 #1F0934;
+  box-shadow: 0.4em 0.3em 0 0 #1f0934;
 }
 
 .btn-layered {
-  background: #EBEBEF;
-  border: 2px solid #1F0934;
+  background: #ebebef;
+  border: 2px solid #1f0934;
   font-family: CircularStd, sans-serif !important;
   font-size: 10pt;
   font-weight: 500;
   line-height: 1;
   padding: 10px 10px;
-  transition: .3s ease-out;
-  -webkit-transition: .3s ease-out;
-  color: #1F0934 !important;
+  transition: 0.3s ease-out;
+  -webkit-transition: 0.3s ease-out;
+  color: #1f0934 !important;
 }
 
 .btn {
   display: inline-block;
   font-weight: 400;
-  color: #1F0934;
+  color: #1f0934;
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
@@ -241,7 +258,7 @@ div {
 
 a {
   margin-left: 10px;
-  color: #1F0934;
+  color: #1f0934;
   text-decoration: none;
   background-color: transparent;
 }
@@ -250,15 +267,15 @@ a:link {
   text-decoration: none;
 }
 
-*, :after, :before {
+*,
+:after,
+:before {
   box-sizing: border-box;
 }
 
 a:-webkit-any-link {
-  color: #2B282D;
+  color: #2b282d;
   cursor: pointer;
   text-decoration: underline;
 }
-
-
 </style>

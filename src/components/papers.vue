@@ -3,9 +3,7 @@
     <div class="titleexp">
       <h1>My Papers.</h1>
     </div>
-    <h2 class="placeholder">
-        To be updated soon ;).
-    </h2>
+    <h2 class="placeholder">To be updated soon ;).</h2>
   </div>
 </template>
 
@@ -42,7 +40,6 @@ export default {
 </script>
 
 <style scoped>
-
 .container_placeholder {
   display: flex;
   justify-content: center;
@@ -66,8 +63,7 @@ export default {
   padding-left: 7.2vw;
   width: 89%;
   margin-top: 10px;
-    justify-content: center;
-
+  justify-content: center;
 }
 
 h1 {
