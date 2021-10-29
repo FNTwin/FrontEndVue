@@ -44,6 +44,8 @@
 
         <jobs/>
 
+        <papers/>
+
       </div>
     </div>
 
@@ -55,6 +57,7 @@ import navigation from "@/components/navigation";
 import bio from "@/components/bio";
 import projects from "@/components/projects";
 import jobs from "@/components/jobs";
+import papers from "@/components/papers"
 
 
 export default {
@@ -69,7 +72,8 @@ export default {
     navigation,
     bio,
     projects,
-    jobs
+    jobs,
+    papers
   },
   methods: {
     toggleDarkMode() {

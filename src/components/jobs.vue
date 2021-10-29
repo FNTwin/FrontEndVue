@@ -1,40 +1,25 @@
 <template>
   <div id="test" class="container_all">
-    <!--<div class="container2" :style="this.color_main">-->
     <div class="titleexp">
-      <h1> My experience.</h1>
+      <h1>My experience.</h1>
     </div>
     <div class="container2">
-
       <div class="image_container">
-        <div class="timeline">
+        <maintime>
+          <div class="changecolortxt" :style="darktxt">
+            <p v-for="jobs in jobarray" :key="jobs.job">
+              <strong>{{ jobs.job }} || {{ jobs.place }}</strong> <br>
+              {{ jobs.date }} <br>
+              <small>{{ jobs.longexplanation }}</small>
 
-          <div class="contdot">
-            <div class="holder3att" :style="darkact"></div>
-            <div class="verticalline" :style="darkline"></div>
+                <ol><li v-for="element in jobs.explanation" :key="element">
+                  <small>{{element}}</small>
+                </li></ol>
+
+                
+            </p>
           </div>
-
-          <div class="contdot">
-            <div class="holder3" :style="darkcircle"></div>
-            <div class="verticalline" :style="darkline"></div>
-          </div>
-
-          <div class="contdot">
-            <div class="holder3" :style="darkcircle"></div>
-          </div>
-
-
-        </div>
-        <div class="jobs">
-          <div class="holder2" :style="darkproject" v-for="jobs in jobarray" :key="jobs.job">
-            <h1 class="headerjob">{{ jobs.job }} | {{jobs.date}}</h1>
-            <h3>{{jobs.place}}</h3>
-            <h3 v-html="jobs.explanation"></h3>
-          </div>
-        </div>
-
-
-
+        </maintime>
       </div>
     </div>
   </div>
@@ -48,119 +33,146 @@ export default {
       publicPath: process.env.BASE_URL,
       jobarray: [
         {
-          "job" : "Researcher",
-          "date" : "01/2021-Now",
-          "place" : "University of Trieste (UNITS)" ,
-          "explanation": "Computational models of a variety of SAM-AuNPs<br>" +
-              "Machine Learning on atomistic and coarse grain simulations"
+          job: "Software Engineer",
+          date: "10/2021 - Now",
+          place: "SMS Group",
+          longexplanation: "",
+          explanation: [
+            "Computational models of a variety of SAM-AuNPs wsuhswuhws wsuhwushuwshuwshs wsuhwsuhuwshuwsbwsbwsuhuwshuws \
+            swuhwushuws usihwuyhws wsiuwhuws uwshuwshusw uhwsuhws swughwsuhuwsbuhwsuwshuws wsuhwsu ",
+            "Machine Learning on atomistic and coarse grain simulations",
+          ],
         },
         {
-          "job" : "Research" ,
-          "date" : "02/2020-05/2020",
-          "place" : "University of Jan Evangelista (UJEP)",
-          "explanation": "Machine Learning for nanomaterials simulations<br>" +
-              "Atomistic and coarse grain simulations"
+          job: "Researcher",
+          date: "01/2021 - Now",
+          place: "University of Trieste (UNITS)",
+          longexplanation: "",
+          explanation: [
+            "Computational models of a variety of SAM-AuNPs ",
+            "Machine Learning on atomistic and coarse grain simulations",
+          ],
         },
         {
-          "job" : "Technical system engineer",
-          "date" : "09/2019-12/2019",
-          "place" : "Internship - Fincantieri S.p.A.",
-          "explanation": "Designed and implemented new routines for parametric modeling<br>" +
-              "Developed internal procedures to decrease man-hours on modeling"
-        }
+          job: "Researcher",
+          date: "02/2020 - 05/2020",
+          place: "University of Jan Evangelista (UJEP)",
+          longexplanation: "",
+          explanation: [
+            "Machine Learning for nanomaterials simulations ",
+            "Atomistic and coarse grain simulations",
+          ],
+        },
+        {
+          job: "Technical system engineer - Internship",
+          date: "09/2019 - 12/2019",
+          place: "Fincantieri S.p.A.",
+          longexplanation: "",
+          explanation: [
+            "Designed and implemented new routines for parametric modelings ",
+            "Developed internal procedures to decrease man-hours on modeling",
+          ],
+        },
       ],
-      night: false
-    }
+      night: false,
+    };
   },
   mounted() {
     this.$root.$on("toggle-dark", this.switch);
   },
   methods: {
     switch() {
-      this.night = !this.night
-    }
+      this.night = !this.night;
+    },
   },
   computed: {
     darkproject() {
       if (this.night) {
         return {
-          "background": "#403D40",
+          background: "#403D40",
           "box-shadow": "0.2em 0.1em 0 0 #1F0934",
-
         };
       } else {
-        return {}
+        return {};
       }
     },
-    correctcolor(){
+    darktxt() {
       if (this.night) {
         return {
-          "color": "#A6A4A6",
-          "transition": ".3s ease-in-out"
-        }
+          color: "#A6A4A6",
+        };
       } else {
-        return {}
+        return {};
       }
     },
-    darkcircle(){
+    correctcolor() {
       if (this.night) {
         return {
-          "border": "2px solid #8F3E8F",
-          "transition": ".3s ease-in-out"
-        }
+          color: "#A6A4A6",
+          transition: ".3s ease-in-out",
+        };
       } else {
-        return {}
+        return {};
       }
     },
-    darkact(){
+    darkcircle() {
       if (this.night) {
         return {
-          "border": "2px solid #8F3E8F",
-          "background": "#A6A4A6",
-          "transition": ".3s ease-in-out"
-        }
+          border: "2px solid #8F3E8F",
+          transition: ".3s ease-in-out",
+        };
       } else {
-        return {}
+        return {};
       }
     },
-    darkline(){
+    darkact() {
+      if (this.night) {
+        return {
+          border: "2px solid #8F3E8F",
+          background: "#A6A4A6",
+          transition: ".3s ease-in-out",
+        };
+      } else {
+        return {};
+      }
+    },
+    darkline() {
       if (this.night) {
         return {
           "border-left": "2px solid #8F3E8F",
-          "transition": ".3s ease-in-out"
-        }
+          transition: ".3s ease-in-out",
+        };
       } else {
-        return {}
+        return {};
       }
     },
     mod() {
       if (this.night) {
         return {
-          "background": "#403D40"
+          background: "#403D40",
         };
       } else {
-        return {}
+        return {};
       }
     },
     dataplot() {
-      return this.test
+      return this.test;
     },
     color_main() {
       if (this.night) {
         return {
-          "background": "#201F20",
-          "color": "#A6A4A6",
+          background: "#201F20",
+          color: "#A6A4A6",
         };
       } else {
-        return {}
+        return {};
       }
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style scoped>
-
 .container2 {
   max-width: 100%;
   display: flex;
@@ -180,19 +192,17 @@ export default {
   max-width: 1500px;
 }
 
-
 .verticalline {
   position: absolute;
   border-left: 3px solid #252225;
   height: 90%;
   margin-top: 6.4vh;
   padding-right: 17.1%;
-
 }
 
 .holder2 {
   display: flex !important;
-  background: #D9D7D3;
+  background: #d9d7d3;
   box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.2);
   transition: 0.1s;
   width: 90%;
@@ -205,9 +215,6 @@ export default {
 
   flex-direction: column;
 }
-
-
-
 
 .contdot {
   display: flex !important;
@@ -236,7 +243,7 @@ export default {
 }
 
 .holder3att {
-  background: #403D40;
+  background: #403d40;
   transition: 0.1s;
   width: 2vh;
   height: 2vh;
@@ -248,44 +255,42 @@ export default {
   margin: auto;
 }
 
-.timeline{
+.timeline {
   display: flex !important;
   justify-content: flex-end;
   flex-direction: column;
   width: 20%;
   height: 36vh;
 }
-.jobs{
+.jobs {
   width: 60%;
   height: 36vh;
-
 }
 
-.titleexp{
+.titleexp {
   display: flex !important;
   margin: auto;
   align-content: center;
   justify-content: center;
 }
 
-
 h1 {
   font-weight: bold;
-  letter-spacing: .13em;
+  letter-spacing: 0.13em;
   font-size: min(6.5vw, 4.7em);
 }
 
-.headerjob{
+.headerjob {
   font-size: min(2vw, 1.5em);
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
   padding-left: 4px;
   padding-top: 2px;
   margin-top: 7px;
 }
 
-h1{
-  text-align:justify;
-  white-space:nowrap;
+h1 {
+  text-align: justify;
+  white-space: nowrap;
 }
 
 h2 {
@@ -301,13 +306,77 @@ h2 {
 
 h3 {
   display: block;
-  font-size: min(1vh,2.2vw);
-  text-align:justify;
+  font-size: min(1vh, 2.2vw);
+  text-align: justify;
   font-weight: normal;
   padding-left: 4px;
   line-height: 1.1em;
   padding-right: 4px;
 }
 
+html {
+  font-size: 14px;
+}
+body {
+  background: #f6f9fc;
+  font-family: "Open Sans", sans-serif;
+  color: #525f7f;
+}
+h2 {
+  margin: 5%;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+maintime {
+  min-width: 300px;
+  max-width: 600px;
+  margin: auto;
+}
+.changecolortxt {
+  transition: 0.1s;
+  color: #252225;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.75em;
+  border-top: 3px solid;
+  border-image: linear-gradient(to right, #743ad5 0%, #d53a9d 100%);
+  border-image-slice: 1;
+  border-width: 3px;
+  margin: 0;
+  padding: 40px;
+  counter-increment: section;
+  position: relative;
+  font-size: 20px;
+}
+
+p:nth-child(odd) {
+  border-right: 3px solid;
+  padding-left: 0;
+}
+
+p:nth-child(even) {
+  border-left: 3px solid;
+  padding-right: 0;
+}
+
+p:first-child {
+  border-top: 0;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+p:last-child {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+li {
+  list-style-type: circle;
+  margin: 0px;
+  padding: 0px;
+}
 
 </style>
