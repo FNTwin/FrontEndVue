@@ -14,6 +14,7 @@
             ref="my-modal6"
             :class="modal - content"
             :style="mod"
+            modal-class="modalcol"
             hide-backdrop
             hide-footer
             title="Brownian Dynamics Optimization"
@@ -46,6 +47,7 @@
             id="BayOpt"
             ref="my-modal5"
             :class="modal - content"
+            modal-class="modalcol"
             :style="mod"
             hide-backdrop
             hide-footer
@@ -85,6 +87,7 @@
               id="N16modal modal-content modal-body modal-header"
               ref="my-modal2"
               :class="modal - content"
+              modal-class="modalcol"
               hide-backdrop
               hide-footer
               title="Dissipative Particle Dynamics Optimization"
@@ -117,6 +120,7 @@
             id="GPGOmodal"
             ref="my-modal"
             :class="modal - content"
+            modal-class="modalcol"
             :style="mod"
             hide-backdrop
             hide-footer
@@ -152,17 +156,19 @@
             id="Defectsmodal"
             ref="my-modal3"
             :class="modal - content"
+            modal-class="modalcol"
             hide-backdrop
             hide-footer
             title="Classification of defects on hot-rolled steel"
           >
             <div class="d-block text-center">
               <h3>
-                Implementation in Tensorflow of various types of CNNs to classify
-                images of surface defects on hot-rolled steel. High accuracy was
-                achieved by cross-validating the hyperparameters and topology of
-                the tested nets. Different topologies and hyperparameters were
-                also studied to improve the accuracy. <br /><br />
+                Implementation in Tensorflow of various types of CNNs to
+                classify images of surface defects on hot-rolled steel. High
+                accuracy was achieved by cross-validating the hyperparameters
+                and topology of the tested nets. Different topologies and
+                hyperparameters were also studied to improve the accuracy.
+                <br /><br />
               </h3>
               <img
                 class="img-rounded"
@@ -182,6 +188,7 @@
             ref="my-modal4"
             id="testet"
             :class="modal - content"
+            modal-class="modalcol"
             hide-backdrop
             hide-footer
             title="GANs"
@@ -194,6 +201,30 @@
                 was done to improve the latent space of the GAN.
 
                 <img class="img-rounded" src="@/assets/g1.jpg" width="100%" />
+                <br /><br />
+              </h3>
+            </div>
+          </b-modal>
+        </div>
+
+        <button :style="darkproject" class="holder2" @click="showModal7">
+          <h1 :style="correctcolor">cristiangabellini.com</h1>
+          <h2 :style="correctcolor">Javascript, Vue.js, HTML/CSS, Netlify</h2>
+        </button>
+        <div class="cont">
+          <b-modal
+            ref="my-modal7"
+            id="testet"
+            :class="modal - content"
+            modal-class="modalcol"
+            hide-backdrop
+            hide-footer
+            title="cristiangabellini.com"
+          >
+            <div class="d-block text-center">
+              <h3>
+                This project is just the implementation of my homepage...aka this site!<br>
+                Not a lot to say here! I just did it from scratch to learn a bit about javascript and vue.js.<br>
                 <br /><br />
               </h3>
             </div>
@@ -235,6 +266,9 @@ export default {
     showModal6() {
       this.$refs["my-modal6"].show();
     },
+    showModal7() {
+      this.$refs["my-modal7"].show();
+    },
     switch() {
       this.night = !this.night;
     },
@@ -243,8 +277,9 @@ export default {
     darkproject() {
       if (this.night) {
         return {
-          background: "#403D40",
-          "box-shadow": "0.2em 0.1em 0 0 #1F0934",
+          /* background: "#403D40", */
+          background: "rgba(64, 61, 64, 0.5)",
+          /*  "box-shadow": "0.2em 0.1em 0 0 #1F0934", */
           transition: ".3s ease-in-out",
         };
       } else {
@@ -310,24 +345,48 @@ export default {
 
 .holder2 {
   display: flex !important;
-  background: #d9d7d3;
-  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.2);
+  /* background: #d9d7d3; */
+  /*   background: transparent; */
+  /* box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.2); */
+
+  background: rgba(217, 215, 211, 0.5);
+
   transition: 0.1s;
   width: 60%;
   height: 100%;
-  border: 1.5px solid black;
-  position: relative;
+
   border-radius: 2px;
   margin: auto;
   margin-bottom: 1.6vh;
+
+  border-width: 3px;
+  line-height: 1.75em;
+  border-bottom: 3px solid;
+  border-right: 12px solid;
+  border-image: linear-gradient(360deg, #743ad5 0%, #d53a9d 100%);
+  border-image-slice: 1;
+  border-left: 0px solid;
+  border-top: 0px solid;
+
+  counter-increment: section;
+  position: relative;
 
   flex-direction: column;
 }
 
 .holder2:hover {
-  opacity: 0.6;
   transition: 0.3s;
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.2);
 }
+
+/deep/ .modalcol > .modal-dialog > .modal-content > .modal-header {
+  background: linear-gradient(to right, #743ad5 0%, #d53a9d 100%);
+  color: white;
+}
+
+/* /deep/ .modalcol > .modal-dialog > .modal-content {
+  background:#201F20 ;
+} */
 
 .img-rounded {
   display: flex;

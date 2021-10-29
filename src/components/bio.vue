@@ -56,34 +56,34 @@ export default {
       command_array: [],
       options: {
         clear: "",
-        "Cristian.education":
+        "cristian.education":
           '["Bachelor\'s degree in Industrial Engineering", "Master\'s degree in Material Engineering"]',
-        "Cristian.languages":
+        "cristian.languages":
           '["Python", "C++", "Fortran",  "HTML/CSS", "Javascript"]',
-        "Cristian.packages":
-          '["Numpy", "SciPy", "scikit-learn", "Pandas", "Matplotlib", "PyTorch", "MDanalysis" ,' +
+        "cristian.packages":
+          '["Numpy", "SciPy", "scikit-learn", "Pandas", "Matplotlib", "PyTorch", "Tensorflow", "MDanalysis" ,' +
           '"DScribe", "PyTraj"]',
-        "Cristian.databases": '["MySQL", "MongoDB"]',
-        "Cristian.various": '["GIT", "HPC", "Bash", "Jupyter", "Unit testing"]',
-        "Cristian.email": '"cris.gabellini@gmail.com"',
-        "Cristian.ML":
+        "cristian.databases": '["MySQL", "MongoDB"]',
+        "cristian.various": '["GIT", "HPC", "Bash", "Jupyter", "Unit testing"]',
+        "cristian.email": '"cris.gabellini@gmail.com"',
+        "cristian.ML":
           '["Gaussian Processes", "Multi Objective Bayesian Optimization", "Gaussian Mixtures",' +
           ' "Deep Learning", "Hierarchical Unsupervised Clustering"]',
-        "Cristian.location": '"Gorizia (GO), Italy"',
-        "Cristian.about":
+        "cristian.location": '"Gorizia (GO), Italy"',
+        "cristian.about":
           '"Just a guy with a passion for machine learning and for computational research of nanomaterials.' +
           "I focused my studies on multiscale modelling techniques and all-atoms simulations and I still try to make smart things by combining them with new machine learning approaches.\n" +
           "I'm interested in the use of machine learning to capture and use the molecular local environments based on their molecular fingerprints (SOAP vectors,Parrinello functions, other distributions)",
-        "Cristian.simulations":
+        "cristian.simulations":
           '["Ab-initio", "All-Atoms", "Coarse-graining DPD and BD"]',
-        "Cristian.interests":
-          '["Skateboard", "Snowboard", "Cooking", "Brewing", "Programming", "Videogames"]',
-        "Cristian.simulationSoftwares":
+        "cristian.interests":
+          '["Skateboarding", "Snowboarding", "Cooking", "Brewing", "Programming", "Videogames"]',
+        "cristian.simulationSoftwares":
           '["Quantum-espresso", "Amber", "LAMMPS", "GROMACS", "DigiMat"]',
         help:
-          "Cristian.email,  Cristian.ML,  Cristian.location," +
-          " Cristian.about,  Cristian.interests,  Cristian.simulations,  Cristian.simulationSoftwares," +
-          " Cristian.education,  Cristian.languages,  Cristian.packages,  Cristian.databases,  Cristian.various,  clear",
+          "cristian.email,  cristian.ML,  cristian.location," +
+          " cristian.about,  cristian.interests,  cristian.simulations,  cristian.simulationSoftwares," +
+          " cristian.education,  cristian.languages,  cristian.packages,  cristian.databases,  cristian.various,  clear",
       },
     };
   },
@@ -93,10 +93,10 @@ export default {
     console.log(
       "Welcome on my webpage! Type help in the terminal to see the available commands!"
     );
-    this.init("Cristian.education");
-    this.init("Cristian.languages");
-    this.init("Cristian.ML");
-    this.init("Cristian.various");
+    this.init("cristian.education");
+    this.init("cristian.languages");
+    this.init("cristian.ML");
+    this.init("cristian.various");
     this.init("help");
   },
   methods: {
