@@ -31,7 +31,7 @@
             ></a>
           </div>
 
-          <a
+          <!--           <a
             class="btn btn-layered offset square"
             role="button"
             href="https://fntwin.github.io/blog/"
@@ -39,7 +39,7 @@
             target="__blank"
             :style="color"
             >Blog</a
-          >
+          > -->
 
           <a
             :href="`${publicPath}CG_Resume.pdf`"
@@ -107,6 +107,7 @@ export default {
       if (this.darkMode) {
         return {
           color: "#8F3E8F!important",
+          //"background-image": "linear-gradient(to right, #743ad5 0%, #d53a9d 100%)!important",
           background: "#403D40",
           transition: ".3s ease-in-out",
         };
@@ -226,6 +227,7 @@ div {
 .square:hover {
   transition: 0.2s;
   opacity: 0.3;
+  /* background: rgba(217, 215, 211, 0.3); */
 }
 
 .offset {
