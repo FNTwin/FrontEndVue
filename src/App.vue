@@ -11,9 +11,9 @@
                        :particleOpacity="0.7"
                        :particlesNumber="90"
                        shapeType="circle"
-                       :particleSize="4"
+                       :particleSize="0"
                        linesColor="#000000"
-                       :linesWidth="1"
+                       :linesWidth="1.2"
                        :lineLinked="true"
                        :lineOpacity="0.4"
                        :linesDistance="150"
@@ -27,9 +27,9 @@
                        :particleOpacity="0.7"
                        :particlesNumber="90"
                        shapeType="circle"
-                       :particleSize="4"
+                       :particleSize="0"
                        linesColor="#B87324"
-                       :linesWidth="1"
+                       :linesWidth="1.2"
                        :lineLinked="true"
                        :lineOpacity="0.4"
                        :linesDistance="150"
@@ -58,6 +58,7 @@ import bio from "@/components/bio";
 import projects from "@/components/projects";
 import jobs from "@/components/jobs";
 import papers from "@/components/papers"
+
 
 
 export default {

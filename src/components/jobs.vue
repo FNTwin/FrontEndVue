@@ -35,13 +35,9 @@ export default {
         {
           job: "Software Engineer",
           date: "10/2021 - Now",
-          place: "SMS Group",
+          place: "SMS Group, Modeling & Digitalization",
           longexplanation: "",
-          explanation: [
-            "Computational models of a variety of SAM-AuNPs wsuhswuhws wsuhwushuwshuwshs wsuhwsuhuwshuwsbwsbwsuhuwshuws \
-            swuhwushuws usihwuyhws wsiuwhuws uwshuwshusw uhwsuhws swughwsuhuwsbuhwsuwshuws wsuhwsu ",
-            "Machine Learning on atomistic and coarse grain simulations",
-          ],
+          explanation: ["Just started, didn't do anything yet"],
         },
         {
           job: "Researcher",
@@ -49,8 +45,10 @@ export default {
           place: "University of Trieste (UNITS)",
           longexplanation: "",
           explanation: [
-            "Computational models of a variety of SAM-AuNPs ",
-            "Machine Learning on atomistic and coarse grain simulations",
+            "Machine Learning analysis of the changes in polarity in the local environments at the interfaces of different AuNPs. High dimensional fingerprints (SOAP), dataset building, automated unsupervised analysis, similarity between local environments based on linear kernel products",
+            "Investigation  of  the  influence  of  the  peripheral  bulk  of the  monolayer  on  the  solvent  accessible  area by Umbrella Sampling, Voronoi Tassellation and other more common techniques",
+            "Developed and implemented routines to optimize coarse grain force fields by using novel Multi Objective Bayesian Optimization techniques",
+            "Setup of clusters and HPC environments routines",
           ],
         },
         {
@@ -59,8 +57,9 @@ export default {
           place: "University of Jan Evangelista (UJEP)",
           longexplanation: "",
           explanation: [
-            "Machine Learning for nanomaterials simulations ",
-            "Atomistic and coarse grain simulations",
+            "Researched machine learning models (DL and other supervised regression models) used for nanomaterials simulations",
+            "Designed and implemented machine learning approaches to coarse-grain water solvents",
+            "Implemented  different  atomistic  and  coarse-grained  simulations  to  build  datasets  for  testing different machine learning approaches",
           ],
         },
         {
@@ -69,8 +68,8 @@ export default {
           place: "Fincantieri S.p.A.",
           longexplanation: "",
           explanation: [
-            "Designed and implemented new routines for parametric modelings ",
-            "Developed internal procedures to decrease man-hours on modeling",
+            "Designed and implemented the automatic creation of complex 2D and 3D objects from tabular data by using parametric modeling",
+            "Developed  new  internal  procedures  to  to decrease man-hours on modeling",
           ],
         },
       ],
@@ -183,7 +182,6 @@ export default {
 
 .image_container {
   display: flex;
-  #flex-direction: row;
   flex-direction: row;
   justify-content: space-evenly;
   padding-bottom: 5%;
@@ -378,5 +376,4 @@ li {
   margin: 0px;
   padding: 0px;
 }
-
 </style>
