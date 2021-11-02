@@ -3,6 +3,73 @@
     <!--<div class="container2" :style="this.color_main">-->
     <div class="container2">
       <div class="image_container">
+        <!-- <button :style="darkproject" class="holder2" @click="showModal9">
+          <h1 :style="correctcolor">Brownian Dynamics Optimization</h1>
+          <h2 :style="correctcolor">Python, Fortran, Bash, LAMMPS</h2>
+        </button>
+        <div class="cont">
+          <div class="gp"></div>
+          <b-modal
+            id="Gl"
+            ref="my-modal9"
+            :class="modal - content"
+            :style="mod"
+            modal-class="modalcol"
+            hide-backdrop
+            hide-footer
+            title="Brownian Dynamics Optimization"
+          >
+            <div class="d-block text-center">
+              <h3>
+                Optimization of a Polyethylene glycol polymer of different
+                numbers of chains for a mesoscale Brownian Dynamics force field.
+                The optimization was done with the BayOPT framework and
+                exploited different types of structural insight from the
+                atomistic behavior of the polymer; different type of
+                scalarization were also conducted to improve the result. Multi
+                Objective optimizations on multiple structural factors were also
+                done with success.
+                <img class="img-rounded" src="@/assets/params.jpg" />
+                <img class="img-rounded" src="@/assets/routine.jpg" />
+                <img class="img-rounded" src="@/assets/results.jpg" />
+              </h3>
+            </div>
+          </b-modal>
+        </div>
+        <button :style="darkproject" class="holder2" @click="showModal8">
+          <h1 :style="correctcolor">Brownian Dynamics Optimization</h1>
+          <h2 :style="correctcolor">Python, Fortran, Bash, LAMMPS</h2>
+        </button>
+        <div class="cont">
+          <div class="gp"></div>
+          <b-modal
+            id="Gl"
+            ref="my-modal8"
+            :class="modal - content"
+            :style="mod"
+            modal-class="modalcol"
+            hide-backdrop
+            hide-footer
+            title="Brownian Dynamics Optimization"
+          >
+            <div class="d-block text-center">
+              <h3>
+                Optimization of a Polyethylene glycol polymer of different
+                numbers of chains for a mesoscale Brownian Dynamics force field.
+                The optimization was done with the BayOPT framework and
+                exploited different types of structural insight from the
+                atomistic behavior of the polymer; different type of
+                scalarization were also conducted to improve the result. Multi
+                Objective optimizations on multiple structural factors were also
+                done with success.
+                <img class="img-rounded" src="@/assets/params.jpg" />
+                <img class="img-rounded" src="@/assets/routine.jpg" />
+                <img class="img-rounded" src="@/assets/results.jpg" />
+              </h3>
+            </div>
+          </b-modal>
+        </div> -->
+
         <button :style="darkproject" class="holder2" @click="showModal6">
           <h1 :style="correctcolor">Brownian Dynamics Optimization</h1>
           <h2 :style="correctcolor">Python, Fortran, Bash, LAMMPS</h2>
@@ -223,8 +290,10 @@
           >
             <div class="d-block text-center">
               <h3>
-                This project is just the implementation of my homepage...aka this site!<br>
-                Not a lot to say here! I just did it from scratch to learn a bit about javascript and vue.js.<br>
+                This project is just the implementation of my homepage...aka
+                this site!<br />
+                Not a lot to say here! I just did it from scratch to learn a bit
+                about javascript and vue.js.<br />
                 <br /><br />
               </h3>
             </div>
@@ -241,7 +310,7 @@ export default {
   data() {
     return {
       publicPath: process.env.BASE_URL,
-      night: false,
+      night: false
     };
   },
   mounted() {
@@ -268,6 +337,12 @@ export default {
     },
     showModal7() {
       this.$refs["my-modal7"].show();
+    },
+    showModal8() {
+      this.$refs["my-modal8"].show();
+    },
+    showModal9() {
+      this.$refs["my-modal9"].show();
     },
     switch() {
       this.night = !this.night;

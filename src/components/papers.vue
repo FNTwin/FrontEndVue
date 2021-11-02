@@ -1,7 +1,7 @@
 <template>
   <div id="test" class="container_placeholder">
     <div class="titleexp">
-      <h1>My Papers.</h1>
+      <h1>My papers.</h1>
     </div>
     <h2 class="placeholder">To be updated soon ;).</h2>
   </div>
