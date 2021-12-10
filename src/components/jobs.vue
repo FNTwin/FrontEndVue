@@ -14,9 +14,7 @@
 
                 <ol><li v-for="element in jobs.explanation" :key="element">
                   <small>{{element}}</small>
-                </li></ol>
-
-                
+                </li></ol>      
             </p>
           </div>
         </maintime>
@@ -35,9 +33,13 @@ export default {
         {
           job: "Software Engineer",
           date: "10/2021 - Now",
-          place: "SMS Group, Modeling & Digitalization",
+          place: "SMS Group, R&D Modeling & Digitalization",
           longexplanation: "",
-          explanation: ["Just started, didn't do anything yet"],
+          explanation: [
+            "Machine Learning for Predictive Maintenance of bearing machinery",
+            "Development of statistical models for Time-Series forecasting",
+            "Development and implementation of models for finite element solvers",
+          ],
         },
         {
           job: "Researcher",

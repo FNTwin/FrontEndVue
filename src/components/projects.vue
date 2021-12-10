@@ -3,73 +3,74 @@
     <!--<div class="container2" :style="this.color_main">-->
     <div class="container2">
       <div class="image_container">
-        <!-- <button :style="darkproject" class="holder2" @click="showModal9">
-          <h1 :style="correctcolor">Brownian Dynamics Optimization</h1>
-          <h2 :style="correctcolor">Python, Fortran, Bash, LAMMPS</h2>
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <button :style="darkproject" class="holder2" @click="showModal11">
+          <h1 :style="correctcolor">
+            Solvent-mediated interactions at the interface of AuNPs
+          </h1>
+          <h2 :style="correctcolor">Python, Bash, Amber</h2>
         </button>
         <div class="cont">
           <div class="gp"></div>
           <b-modal
             id="Gl"
-            ref="my-modal9"
+            ref="my-modal11"
             :class="modal - content"
             :style="mod"
             modal-class="modalcol"
             hide-backdrop
             hide-footer
-            title="Brownian Dynamics Optimization"
+            title="Solvent-mediated interactions at the interface of AuNPs"
           >
             <div class="d-block text-center">
               <h3>
-                Optimization of a Polyethylene glycol polymer of different
-                numbers of chains for a mesoscale Brownian Dynamics force field.
-                The optimization was done with the BayOPT framework and
-                exploited different types of structural insight from the
-                atomistic behavior of the polymer; different type of
-                scalarization were also conducted to improve the result. Multi
-                Objective optimizations on multiple structural factors were also
-                done with success.
-                <img class="img-rounded" src="@/assets/params.jpg" />
-                <img class="img-rounded" src="@/assets/routine.jpg" />
-                <img class="img-rounded" src="@/assets/results.jpg" />
+                Machine Learning analysis of the changes in polarity in the
+                local environments at the interfaces of different AuNPs. To
+                analyze the vast chemical space and compare the different environments, 
+                long and short range high dimensional molecular fingerprints (Smooth Overlaps of Atomic Positions) were
+                paired with dimensionality reduction and
+                automatic clustering analysis (Gaussian Mixture and BIC). 
+                Similarity between the local environments was based on linear kernel
+                products and the resulting local environments distances were utilized to relate on sperimental ESR measures.
+
+                <br><br><br>Artistic rendering done on Blender.
+               <img class="img-rounded" src="@/assets/compressed_file_SOAP.jpg" />
+
               </h3>
             </div>
           </b-modal>
         </div>
-        <button :style="darkproject" class="holder2" @click="showModal8">
-          <h1 :style="correctcolor">Brownian Dynamics Optimization</h1>
-          <h2 :style="correctcolor">Python, Fortran, Bash, LAMMPS</h2>
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <button :style="darkproject" class="holder2" @click="showModal10">
+          <h1 :style="correctcolor">Surface accessibility of AuNPs</h1>
+          <h2 :style="correctcolor">Python, Bash, Amber</h2>
         </button>
         <div class="cont">
           <div class="gp"></div>
           <b-modal
             id="Gl"
-            ref="my-modal8"
+            ref="my-modal10"
             :class="modal - content"
             :style="mod"
             modal-class="modalcol"
             hide-backdrop
             hide-footer
-            title="Brownian Dynamics Optimization"
+            title="Surface accessibility of AuNPs"
           >
             <div class="d-block text-center">
               <h3>
-                Optimization of a Polyethylene glycol polymer of different
-                numbers of chains for a mesoscale Brownian Dynamics force field.
-                The optimization was done with the BayOPT framework and
-                exploited different types of structural insight from the
-                atomistic behavior of the polymer; different type of
-                scalarization were also conducted to improve the result. Multi
-                Objective optimizations on multiple structural factors were also
-                done with success.
-                <img class="img-rounded" src="@/assets/params.jpg" />
-                <img class="img-rounded" src="@/assets/routine.jpg" />
-                <img class="img-rounded" src="@/assets/results.jpg" />
+                Investigation of the influence of the peripheral bulk of the
+                monoloyaer on the solvent accessible area. Umbrella sampling and WHAM were used to 
+                compute the Potential Of Mean Force of different compositions of the monolayer.
+                Spherical Voronoi was also used in conjunction with a solvent mapping technique
+                to gain knowledge of the roles and spatial distribution of both the ligands and the solvent.
+                <br><br><br> Rendering done on Blender. 
+                <img class="img-rounded" src="@/assets/3NP_GOOD_opt.jpg" />
               </h3>
             </div>
           </b-modal>
-        </div> -->
-
+        </div>
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
         <button :style="darkproject" class="holder2" @click="showModal6">
           <h1 :style="correctcolor">Brownian Dynamics Optimization</h1>
           <h2 :style="correctcolor">Python, Fortran, Bash, LAMMPS</h2>
@@ -88,11 +89,11 @@
           >
             <div class="d-block text-center">
               <h3>
-                Optimization of a Polyethylene glycol polymer of different
-                numbers of chains for a mesoscale Brownian Dynamics force field.
-                The optimization was done with the BayOPT framework and
-                exploited different types of structural insight from the
-                atomistic behavior of the polymer; different type of
+                Multiscale bottom-up optimization of a Polyethylene glycol
+                polymer of different numbers of chains for a mesoscale Brownian
+                Dynamics force field. The optimization was done with the BayOPT
+                framework and exploited different types of structural distributions
+                from the atomistic behavior of the polymer; different type of
                 scalarization were also conducted to improve the result. Multi
                 Objective optimizations on multiple structural factors were also
                 done with success.
@@ -103,7 +104,7 @@
             </div>
           </b-modal>
         </div>
-
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
         <button :style="darkproject" class="holder2" @click="showModal5">
           <h1 :style="correctcolor">BayOPT</h1>
           <h2 :style="correctcolor">Python</h2>
@@ -141,7 +142,7 @@
             </div>
           </b-modal>
         </div>
-
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
         <button :style="darkproject" class="holder2" @click="showModal2">
           <h1 :style="correctcolor">
             Dissipative Particle Dynamics Optimization
@@ -176,7 +177,7 @@
             </b-modal>
           </div>
         </div>
-
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
         <button :style="darkproject" class="holder2" @click="showModal">
           <h1 :style="correctcolor">GPGO</h1>
           <h2 :style="correctcolor">Python</h2>
@@ -211,7 +212,7 @@
             </div>
           </b-modal>
         </div>
-
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
         <button :style="darkproject" class="holder2" @click="showModal3">
           <h1 :style="correctcolor">
             Classification of defects on hot-rolled steel
@@ -245,7 +246,7 @@
             </div>
           </b-modal>
         </div>
-
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
         <button :style="darkproject" class="holder2" @click="showModal4">
           <h1 :style="correctcolor">GANs</h1>
           <h2 :style="correctcolor">Python, Jupyter</h2>
@@ -273,7 +274,7 @@
             </div>
           </b-modal>
         </div>
-
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
         <button :style="darkproject" class="holder2" @click="showModal7">
           <h1 :style="correctcolor">cristiangabellini.com</h1>
           <h2 :style="correctcolor">Javascript, Vue.js, HTML/CSS, Netlify</h2>
@@ -310,7 +311,7 @@ export default {
   data() {
     return {
       publicPath: process.env.BASE_URL,
-      night: false
+      night: false,
     };
   },
   mounted() {
@@ -343,6 +344,12 @@ export default {
     },
     showModal9() {
       this.$refs["my-modal9"].show();
+    },
+    showModal10() {
+      this.$refs["my-modal10"].show();
+    },
+    showModal11() {
+      this.$refs["my-modal11"].show();
     },
     switch() {
       this.night = !this.night;

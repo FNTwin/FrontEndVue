@@ -3,7 +3,13 @@
     <div class="titleexp">
       <h1>My papers.</h1>
     </div>
-    <h2 class="placeholder">To be updated soon ;).</h2>
+    <!-- <h2 class="placeholder">To be updated soon ;).</h2> -->
+    <h2 class="center_container"> 
+      <p v-for="paper in papersarray"  :key="paper.name">
+      <strong>{{paper.name}}</strong> - {{paper.journal}} 
+       {{paper.authors}}  {{paper.years}} 
+      </p>
+    </h2>
   </div>
 </template>
 
@@ -14,6 +20,24 @@ export default {
     return {
       publicPath: process.env.BASE_URL,
       night: false,
+      papersarray: [
+        {name: "oxo-Graphene as a new efficient platform for gene silencing",
+         journal: "Manuscript in preparation",
+         authors: "",
+         years: ""} ,
+        {name: "Surface accessibility of AuNPs",
+         journal: "Manuscript in preparation",
+         authors: "",
+         years: ""},
+        {name: "Solvent-mediated interactions at the interface of AuNPs",
+         journal: "Manuscript in preparation",
+         authors: "",
+         years: ""},
+        {name: "Brownian Dynamics Optimization",
+         journal: "Manuscript in preparation",
+         authors: "",
+         years: ""}
+      ]
     };
   },
   mounted() {
@@ -58,12 +82,13 @@ export default {
   justify-content: center;
 }
 
-.placeholder {
+.center_container {
   display: flex;
-  padding-left: 7.2vw;
-  width: 89%;
+  padding-left: 1.0vw; 
+  width: 100%;
   margin-top: 10px;
   justify-content: center;
+  flex-direction: column;
 }
 
 h1 {
@@ -75,4 +100,44 @@ h1 {
 h2 {
   font-size: min(4vw, 1.5em);
 }
+
+p {
+  font-size: 1em;
+  line-height: 1.75em;
+  border-top: 3px solid;
+  border-image: linear-gradient(to right, #743ad5 0%, #d53a9d 100%);
+  border-image-slice: 1;
+  border-width: 3px;
+  margin: 0;
+  padding: 40px;
+  counter-increment: section;
+  position: relative;
+  font-size: 23px;
+}
+p:nth-child(even) {
+  border-right: 3px solid;
+  padding-left: 0;
+}
+
+p:nth-child(odd) {
+  border-left: 3px solid;
+  padding-right: 0;
+}
+
+p:first-child {
+  border-top: 0;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+p:last-child {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+li {
+  list-style-type: circle;
+  margin: 0px;
+  padding: 0px;
+}
+
 </style>
