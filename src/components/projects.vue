@@ -284,7 +284,7 @@
         <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
         <button :style="darkproject" class="holder2" @click="showModal7">
           <h1 :style="correctcolor">cristiangabellini.com</h1>
-          <h2 :style="correctcolor">Javascript, Vue.js, HTML/CSS, Netlify</h2>
+          <h2 :style="correctcolor">Python Javascript, Vue.js, FastAPI, HTML/CSS, Netlify, Heroku</h2>
         </button>
         <div class="cont">
           <b-modal
@@ -301,7 +301,8 @@
                 This project is just the implementation of my homepage...aka
                 this site!<br />
                 Not a lot to say here! I just did it from scratch to learn a bit
-                about javascript and vue.js.<br />
+                about javascript and vuejs with a nodejs backend deployed on Netlify.<br />
+                REST APis done with Python and FastAPI and deployed on Heroku.<br />
                 <br /><br />
               </h3>
             </div>
