@@ -311,7 +311,7 @@
     </div>
     <div class="API">
       <div class="titleexp">
-        <h1 :style="correctcolor">Interactive stuff. (not optimized for mobile)</h1>
+        <h1 :style="correctcolor">Interactive stuff.</h1>
       </div>
       <similarity />
     </div>
