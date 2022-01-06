@@ -24,7 +24,6 @@
           >
             <div class="d-block text-center">
               <h3>
-                <similarity> </similarity>
                 Machine Learning analysis of the changes in polarity in the
                 local environments at the interfaces of different AuNPs. To
                 analyze the vast chemical space and compare the different
