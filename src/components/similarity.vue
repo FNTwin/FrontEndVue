@@ -153,10 +153,11 @@ h3 {
   background: transparent;
   display: flex;
   align-content: flex-start;
-  justify-content: space-evenly;
+  justify-content: center;
+  margin: auto;
   align-content: center;
-  height: 600px;
-  width: auto;
+  height: 35vh;
+  width: 70%;
 }
 .area {
   display: flex;
@@ -203,7 +204,7 @@ h3 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 600px;
+  width: auto;
   background: transparent;
 }
 ul {
@@ -240,5 +241,7 @@ textarea::-webkit-scrollbar-thumb {
   flex-direction: row;
   margin: center;
   align-content: space-between;
+  justify-content: center;
+  width : 60%;
 }
 </style>

@@ -312,7 +312,7 @@
     </div>
     <div class="API">
       <div class="titleexp">
-        <h1 :style="correctcolor">Interactive stuff.</h1>
+        <h1 :style="correctcolor">Interactive stuff. (not optimized for mobile)</h1>
       </div>
       <similarity />
     </div>
@@ -555,7 +555,7 @@ h3 {
   align-content: center;
   justify-content: center;
   flex-direction: column;
-  max-width: 1400px;
+  max-width: 100%;
   margin: auto;
 }
 
