@@ -24,18 +24,23 @@
           >
             <div class="d-block text-center">
               <h3>
+                <similarity> </similarity>
                 Machine Learning analysis of the changes in polarity in the
                 local environments at the interfaces of different AuNPs. To
-                analyze the vast chemical space and compare the different environments, 
-                long and short range high dimensional molecular fingerprints (Smooth Overlaps of Atomic Positions) were
-                paired with dimensionality reduction and
-                automatic clustering analysis (Gaussian Mixture and BIC). 
-                Similarity between the local environments was based on linear kernel
-                products and the resulting local environments distances were utilized to relate on sperimental ESR measures.
-
-                <br><br><br>Artistic rendering done on Blender.
-               <img class="img-rounded" src="@/assets/compressed_file_SOAP.jpg" />
-
+                analyze the vast chemical space and compare the different
+                environments, long and short range high dimensional molecular
+                fingerprints (Smooth Overlaps of Atomic Positions) were paired
+                with dimensionality reduction and automatic clustering analysis
+                (Gaussian Mixture and BIC). Similarity between the local
+                environments was based on linear kernel products and the
+                resulting local environments distances were utilized to relate
+                on sperimental ESR measures.
+                <br />
+                <br /><br />Artistic rendering done on Blender.
+                <img
+                  class="img-rounded"
+                  src="@/assets/compressed_file_SOAP.jpg"
+                />
               </h3>
             </div>
           </b-modal>
@@ -60,11 +65,14 @@
             <div class="d-block text-center">
               <h3>
                 Investigation of the influence of the peripheral bulk of the
-                monoloyaer on the solvent accessible area. Umbrella sampling and WHAM were used to 
-                compute the Potential Of Mean Force of different compositions of the monolayer.
-                Spherical Voronoi was also used in conjunction with a solvent mapping technique
-                to gain knowledge of the roles and spatial distribution of both the ligands and the solvent.
-                <br><br><br> Rendering done on Blender. 
+                monoloyaer on the solvent accessible area. Umbrella sampling and
+                WHAM were used to compute the Potential Of Mean Force of
+                different compositions of the monolayer. Spherical Voronoi was
+                also used in conjunction with a solvent mapping technique to
+                gain knowledge of the roles and spatial distribution of both the
+                ligands and the solvent.
+                <br /><br /><br />
+                Rendering done on Blender.
                 <img class="img-rounded" src="@/assets/3NP_GOOD_opt.jpg" />
               </h3>
             </div>
@@ -92,11 +100,11 @@
                 Multiscale bottom-up optimization of a Polyethylene glycol
                 polymer of different numbers of chains for a mesoscale Brownian
                 Dynamics force field. The optimization was done with the BayOPT
-                framework and exploited different types of structural distributions
-                from the atomistic behavior of the polymer; different type of
-                scalarization were also conducted to improve the result. Multi
-                Objective optimizations on multiple structural factors were also
-                done with success.
+                framework and exploited different types of structural
+                distributions from the atomistic behavior of the polymer;
+                different type of scalarization were also conducted to improve
+                the result. Multi Objective optimizations on multiple structural
+                factors were also done with success.
                 <img class="img-rounded" src="@/assets/params.jpg" />
                 <img class="img-rounded" src="@/assets/routine.jpg" />
                 <img class="img-rounded" src="@/assets/results.jpg" />
@@ -302,12 +310,23 @@
         </div>
       </div>
     </div>
+    <div class="API">
+      <div class="titleexp">
+        <h1 :style="correctcolor">Interactive stuff.</h1>
+      </div>
+      <similarity />
+    </div>
   </div>
 </template>
 
 <script>
+import similarity from "@/components/similarity.vue";
+
 export default {
   name: "projects",
+  components: {
+    similarity,
+  },
   data() {
     return {
       publicPath: process.env.BASE_URL,
@@ -363,6 +382,16 @@ export default {
           background: "rgba(64, 61, 64, 0.5)",
           /*  "box-shadow": "0.2em 0.1em 0 0 #1F0934", */
           transition: ".3s ease-in-out",
+        };
+      } else {
+        return {};
+      }
+    },
+    darktext() {
+      if (this.night) {
+        return {
+          background: "#403D40",
+          "box-shadow": "0.2em 0.1em 0 0 #1F0934",
         };
       } else {
         return {};
@@ -519,5 +548,27 @@ h3 {
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   font-weight: normal;
+}
+
+.API {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.titleexp {
+  display: flex !important;
+  margin: auto;
+  align-content: center;
+  justify-content: center;
+}
+
+.titleexp h1 {
+  font-weight: bold;
+  letter-spacing: 0.13em;
+  font-size: min(6.5vw, 4.7em);
 }
 </style>

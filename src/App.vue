@@ -117,7 +117,6 @@ export default {
   background: #F2EFEB;
   /*background-image: url("../src/assets/triangles_light.png");*/
   transition: .3s ease-in-out;
-
 }
 
 .container_princ {
@@ -126,7 +125,6 @@ export default {
   flex-direction: column;
   justify-content: space-between;
   height: auto;
-
 }
 
 .prima {
@@ -143,6 +141,5 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-
 }
 </style>

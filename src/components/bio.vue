@@ -37,7 +37,7 @@
       </div>
     </div>
     <div class="project" :style="projectdark">
-      <h1 id="project">Some of my projects.</h1>
+      <h1 id="project">Some of my projects.<br><br></h1>
     </div>
   </div>
 </template>
