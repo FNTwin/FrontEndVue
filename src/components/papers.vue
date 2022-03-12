@@ -21,8 +21,8 @@ export default {
       publicPath: process.env.BASE_URL,
       night: false,
       papersarray: [
-        {name: "oxo-Graphene as a new efficient platform for gene silencing",
-         journal: "Manuscript in preparation",
+        {name: "oxo-Graphene as an efficient carrer for gene delivery",
+         journal: "Accepted for publication in Carbon",
          authors: "",
          years: ""} ,
         {name: "Surface accessibility of AuNPs",
