@@ -6,7 +6,7 @@
         <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
         <button :style="darkproject" class="holder2" @click="showModal11">
           <h1 :style="correctcolor">
-            Solvent-mediated interactions at the interface of AuNPs
+            Identification of Molecular Environments in Self-assembled Monolayers via Machine Leanring, <br> Molecular Dynamics and Electron Spin Resonance<br>  
           </h1>
           <h2 :style="correctcolor">Python, Bash, Amber</h2>
         </button>
@@ -20,8 +20,7 @@
             modal-class="modalcol"
             hide-backdrop
             hide-footer
-            title="Solvent-mediated interactions at the interface of AuNPs"
-          >
+            title="Identification of Molecular Environments in Self-assembled Monolayers via Machine Leanring, Molecular Dynamics and Electron Spin Resonance">
             <div class="d-block text-center">
               <h3>
                 Machine Learning analysis of the changes in polarity in the

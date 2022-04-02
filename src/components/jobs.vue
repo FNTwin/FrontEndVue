@@ -36,9 +36,11 @@ export default {
           place: "SMS Group, R&D Modeling & Digitalization",
           longexplanation: "",
           explanation: [
-            "Machine Learning for Predictive Maintenance of bearing machinery",
-            "Development of statistical models for Time-Series forecasting",
-            "Development and implementation of models for finite element solvers",
+            "Signal processing and modeling of a bayesian exponential degradation model for the predictive maintenance of bearing machinery",
+            "Time-Series forecasting using Theta, ARIMA and LSTM models",
+            "Correlation analysis and models for EAF and CCM data",
+            "Development and implementation of finite element thermoelastic linear models for continuos casting",
+            "Development and deployment of custom grafana interfaces"
           ],
         },
         {

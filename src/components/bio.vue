@@ -59,11 +59,11 @@ export default {
         "cristian.education":
           '["Bachelor\'s degree in Industrial Engineering", "Master\'s degree in Material Engineering"]',
         "cristian.languages":
-          '["Python", "C#", "Fortran", "Delphi", "C++", "HTML/CSS", "Javascript"]',
+          '["Python", "C#", "Fortran", "C++", "HTML/CSS", "Javascript"]',
         "cristian.packages":
           '["Numpy", "SciPy", "scikit-learn", "Pandas", "Matplotlib", "PyTorch", "Tensorflow", "MDanalysis" ,' +
           '"DScribe", "PyTraj"]',
-        "cristian.databases": '["MySQL", "MongoDB"]',
+        "cristian.databases": '["MySQL", "MongoDB", "InfluxDB]',
         "cristian.various": '["GIT", "HPC", "Bash", "Jupyter", "Unit testing"]',
         "cristian.email": '"cris.gabellini@gmail.com"',
         "cristian.ML":
@@ -75,7 +75,7 @@ export default {
           "I focused my studies on multiscale modelling techniques and all-atoms simulations and I still try to make smart things by combining them with new machine learning approaches.\n" +
           "I'm interested in the use of machine learning to capture and use the molecular local environments based on their molecular fingerprints (SOAP vectors,Parrinello functions, other distributions)",
         "cristian.simulations":
-          '["Ab-initio", "All-Atoms", "Coarse-graining DPD and BD", "Umbrella Sampling"]',
+          '["Ab-initio", "All-Atoms", "Coarse-graining DPD and BD", "Umbrella Sampling","Free Energy Perturbation"]',
         "cristian.interests":
           '["Skateboarding", "Snowboarding", "Cooking", "Brewing", "Programming", "Videogames"]',
         "cristian.simulationSoftwares":

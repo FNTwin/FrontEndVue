@@ -21,15 +21,15 @@ export default {
       publicPath: process.env.BASE_URL,
       night: false,
       papersarray: [
-        {name: "oxo-Graphene as an efficient carrer for gene delivery",
-         journal: "Accepted for publication in Carbon",
+        {name: "The importance of molecular structure and functionalization of oxo-graphene sheets for gene silencing",
+         journal: "https://doi.org/10.1016/j.carbon.2022.03.066",
          authors: "",
          years: ""} ,
-        {name: "Surface accessibility of AuNPs",
+        {name: "Identification of Molecular Environments in Self-assembled Monolayers via Machine Leanring, Molecular Dynamics and Electron Spin Resonance",
          journal: "Manuscript in preparation",
          authors: "",
          years: ""},
-        {name: "Solvent-mediated interactions at the interface of AuNPs",
+        {name: "Surface accessibility of AuNPs",
          journal: "Manuscript in preparation",
          authors: "",
          years: ""},
@@ -103,7 +103,7 @@ h2 {
 
 p {
   font-size: 1em;
-  line-height: 1.75em;
+  line-height: 1.6em;
   border-top: 3px solid;
   border-image: linear-gradient(to right, #743ad5 0%, #d53a9d 100%);
   border-image-slice: 1;
@@ -112,7 +112,7 @@ p {
   padding: 40px;
   counter-increment: section;
   position: relative;
-  font-size: 23px;
+  font-size: 20px;
 }
 p:nth-child(even) {
   border-right: 3px solid;
