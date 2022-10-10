@@ -59,31 +59,33 @@ export default {
         "cristian.education":
           '["Bachelor\'s degree in Industrial Engineering", "Master\'s degree in Material Engineering"]',
         "cristian.languages":
-          '["Python", "C#", "Fortran", "C++", "HTML/CSS", "Javascript"]',
+          '["Python", "Rust", "Fortran", "C++", "HTML/CSS", "Javascript"]',
         "cristian.packages":
-          '["Numpy", "SciPy", "scikit-learn", "Pandas", "Matplotlib", "PyTorch", "Tensorflow", "MDanalysis" ,' +
+          '["Numpy", "SciPy", "scikit-learn", "Pandas", "Matplotlib", "PyTorch",  "PyTorch-Geometric", "Tensorflow", "MDanalysis" ,' +
           '"DScribe", "PyTraj"]',
-        "cristian.databases": '["MySQL", "MongoDB", "InfluxDB]',
+        "cristian.databases": '["MySQL", "MongoDB", "InfluxDB"]',
         "cristian.various": '["GIT", "HPC", "Bash", "Jupyter", "Unit testing"]',
         "cristian.email": '"cris.gabellini@gmail.com"',
         "cristian.ML":
           '["Gaussian Processes", "Multi Objective Bayesian Optimization", "Gaussian Mixtures",' +
-          ' "Deep Learning", "Hierarchical Unsupervised Clustering", "Supervised Learning"]',
-        "cristian.location": '"Gorizia (GO), Italy"',
+          ' "Deep Learning", "Graph Neural Networks", "Hierarchical Unsupervised Clustering", "Supervised Learning"]',
+        "cristian.location": '"Montreal, Canada"',
+        "cristian.speaking": '["Italian", "English (IELTS 8.0)", "Learning French"]',
         "cristian.about":
           '"Just a guy with a passion for machine learning and for computational research of nanomaterials.' +
           "I focused my studies on multiscale modelling techniques and all-atoms simulations and I still try to make smart things by combining them with new machine learning approaches.\n" +
-          "I'm interested in the use of machine learning to capture and use the molecular local environments based on their molecular fingerprints (SOAP vectors,Parrinello functions, other distributions)",
+          "I'm interested in the use of machine learning to capture and use the molecular local environments based on their molecular fingerprints (SOAP vectors,Parrinello functions, other distributions).\n"+
+          "Recently I moved from Gorizia, Italy to Montreal, Canada to contribute to unlock the true potential of deep learning in drug design.",
         "cristian.simulations":
-          '["Ab-initio", "All-Atoms", "Coarse-graining DPD and BD", "Umbrella Sampling","Free Energy Perturbation"]',
+          '["Ab-initio", "All-Atoms", "Coarse-graining DPD and BD",  "Constant-pH", "Steered/Bias Dynamics", "Umbrella Sampling","Free Energy Perturbation", "Metadynamics""]',
         "cristian.interests":
-          '["Skateboarding", "Snowboarding", "Cooking", "Brewing", "Programming", "Videogames"]',
+          '["Cooking", "Brewing", "Skateboarding", "Snowboarding", "Programming", "Videogames"]',
         "cristian.simulationSoftwares":
-          '["Quantum-espresso", "Amber", "LAMMPS", "GROMACS", "DigiMat"]',
+          '["Amber", "LAMMPS", "GROMACS", "OpenMM+OpenFF", "Quantum-espresso"]',
         help:
           "cristian.email,  cristian.ML,  cristian.location," +
-          " cristian.about,  cristian.interests,  cristian.simulations,  cristian.simulationSoftwares," +
-          " cristian.education,  cristian.languages,  cristian.packages,  cristian.databases,  cristian.various,  clear",
+          " cristian.about, cristian.speaking, cristian.interests,  cristian.simulations,  cristian.simulationSoftwares," +
+          " cristian.education,  cristian.languages, cristian.packages,  cristian.databases,  cristian.various,  clear",
       },
     };
   },

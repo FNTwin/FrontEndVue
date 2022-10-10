@@ -4,6 +4,34 @@
     <div class="container2">
       <div class="image_container">
         <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <button :style="darkproject" class="holder2" @click="showModal12">
+          <h1 :style="correctcolor">
+            Deposition and self-assembly of molecules (DYEs) on h-BN and Graphene monolayers
+          </h1>
+          <h2 :style="correctcolor">Python, Bash, Gromacs</h2>
+        </button>
+        <div class="cont">
+          <div class="gp"></div>
+          <b-modal
+            id="Gl"
+            ref="my-modal12"
+            :class="modal - content"
+            :style="mod"
+            modal-class="modalcol"
+            hide-backdrop
+            hide-footer
+            title="Deposition and self-assembly of molecules (DYEs) on h-BN and Graphene monolayers">
+            <div class="d-block text-center">
+              <h3>
+                Study of the deposition and self-assembly of BODIPY molecules on h-BN and Graphene monolayers sheets.
+                Deposition and self-assembly simulations for an increasing number of molecules to match the sperimental measures
+                and to better understand the self-assembly patterns of the molecules.
+                Free Energy Perturbation techniques used to study the binding of the molecules on the surface.
+              </h3>
+            </div>
+          </b-modal>
+        </div>
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
         <button :style="darkproject" class="holder2" @click="showModal11">
           <h1 :style="correctcolor">
             Identification of Molecular Environments in Self-assembled Monolayers via Machine Leanring, <br> Molecular Dynamics and Electron Spin Resonance<br>  
@@ -368,6 +396,9 @@ export default {
     },
     showModal11() {
       this.$refs["my-modal11"].show();
+    },
+    showModal12() {
+      this.$refs["my-modal12"].show();
     },
     switch() {
       this.night = !this.night;

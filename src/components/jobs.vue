@@ -31,12 +31,24 @@ export default {
       publicPath: process.env.BASE_URL,
       jobarray: [
         {
+          job: "Application Scientist, Computational Chemistry",
+          date: "08/2022 - Now",
+          place: "Valence Discovery",
+          longexplanation: "",
+          explanation: [
+            "Graph Neural Networks for drug discovery",
+            "Deep Learning for accurate pKa predictions",
+            "Multi tasking Graph neural network for different CYP inhibition",
+          ],
+        },
+        {
           job: "Software Engineer",
-          date: "10/2021 - Now",
+          date: "10/2021 - 04/2022",
           place: "SMS Group, R&D Modeling & Digitalization",
           longexplanation: "",
           explanation: [
             "Signal processing and modeling of a bayesian exponential degradation model for the predictive maintenance of bearing machinery",
+            "Development of machine learning models for EAF maintenance",
             "Time-Series forecasting using Theta, ARIMA and LSTM models",
             "Correlation analysis and models for EAF and CCM data",
             "Development and implementation of finite element thermoelastic linear models for continuos casting",
@@ -45,14 +57,17 @@ export default {
         },
         {
           job: "Researcher",
-          date: "01/2021 - Now",
+          date: "01/2021 - 05/2022",
           place: "University of Trieste (UNITS)",
           longexplanation: "",
           explanation: [
-            "Machine Learning analysis of the changes in polarity in the local environments at the interfaces of different AuNPs. High dimensional fingerprints (SOAP), dataset building, automated unsupervised analysis, similarity between local environments based on linear kernel products",
-            "Investigation  of  the  influence  of  the  peripheral  bulk  of the  monolayer  on  the  solvent  accessible  area by Umbrella Sampling, Voronoi Tassellation and other more common techniques",
-            "Developed and implemented routines to optimize coarse grain force fields by using novel Multi Objective Bayesian Optimization techniques",
-            "Setup of clusters and HPC environments routines",
+          "Created BayGPGO: aframework to perform multi-objective optimization of Coarse-Grainded force fields by using bayesian optimization on gaussian process regression model",
+          "Investigation of the influence of the peripheral bulk of the monolayer on the solvent accessible area by Umbrella Sampling, Voronoi Tassellation and other more techniques",
+          "Developed and implemented routines to model AuNPs by correctly simulating the pKa-influenced behaviour in explicit solvents. Replica Exchange used to improve the Monte-Carlo protonation",
+          "Created machine learning approaches to analyze and predict the similarity between local environments of different AuNPs by exploiting SOAP fingerprints, dimensionality reduction (PCA), Gaussian Mixtures clustering, kernels product and ESR measurements",
+          "Development of computational models of a variety of SAM-AuNPs via the integration of many technique (QM, MD and CG dynamics)",
+          "Free energy calculations via Umbrella sampling and Free energy perturbation",
+          "Self-Assembly of molecules on h-BN/Graphene monolayer and binding free energy investigation by FEP"
           ],
         },
         {
