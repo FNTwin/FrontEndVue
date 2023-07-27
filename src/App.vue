@@ -8,10 +8,10 @@
       <navigation @toggle-dark="toggleDarkMode"/>
       <div class="prima">
         <vue-particles color="#000000"
-                       :particleOpacity="0.7"
+                       :particleOpacity="0.9"
                        :particlesNumber="90"
                        shapeType="circle"
-                       :particleSize="0"
+                       :particleSize="5"
                        linesColor="#000000"
                        :linesWidth="1.2"
                        :lineLinked="true"
@@ -24,10 +24,10 @@
                        clickMode="push" v-if="!this.isDarkMode"></vue-particles>
 
         <vue-particles color="#B87324"
-                       :particleOpacity="0.7"
+                       :particleOpacity="0.9"
                        :particlesNumber="90"
                        shapeType="circle"
-                       :particleSize="0"
+                       :particleSize="5"
                        linesColor="#B87324"
                        :linesWidth="1.2"
                        :lineLinked="true"
@@ -117,6 +117,7 @@ export default {
   background: #F2EFEB;
   /*background-image: url("../src/assets/triangles_light.png");*/
   transition: .3s ease-in-out;
+  
 }
 
 .container_princ {

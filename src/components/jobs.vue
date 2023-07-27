@@ -30,15 +30,31 @@ export default {
     return {
       publicPath: process.env.BASE_URL,
       jobarray: [
+          {
+          job: "Associate Scientist",
+          date: "05/2023 - Now",
+          place: "Valence Labs",
+          longexplanation:  "Following the acquisition of Valence Discovery by Recursion, Valence Labs continues as a semi-autonomous R&D engine with a mission of harnessing computation to radically improve lives.",
+          explanation: [
+          ],
+        },
         {
           job: "Application Scientist, Computational Chemistry",
-          date: "08/2022 - Now",
-          place: "Valence Discovery",
-          longexplanation: "",
+          date: "08/2022 - 05/2023",
+          place: "Valence Labs",
+          longexplanation: "Valence Discovery was a biotechnology company built on advances in deep learning. Valence was spun out of Mila, the world's largest deep learning research institute, before being acquired by Recursion Pharmaceutical (NASDAQ: RXRX) in May 2023.",
           explanation: [
-            "Graph Neural Networks for drug discovery",
-            "Deep Learning for accurate pKa predictions",
-            "Multi tasking Graph neural network for different CYP inhibition",
+              "Developing infrastructure features to support internal Machine Learning models",
+              "Planning medium and long-term evolution of the platform infrastruc- ture using Machine Learning models",
+              "Supporting custom and existing implementation of new Machine Learning methods",
+              "Designing and implementing hands-on a fine-grained infrastructure security policy",
+              "Designing and implementing hands-on a platform-wide monitoring strategy",
+              "Assisting and supporting end-users",
+              "Drug metabolism and pharmacokinetics (DMPK) prediction with state-of-the-art Graph Neural Network Models",
+              "Free energy molecular dynamics calculation on protein-ligand complexes ",
+              "Structure-based approaches for Drug Discovery in low data regime via state-of-the-art physical fingerprints (SOAP, ACE)",
+              "Equivariant Machine Learning Interaction Potentials from Quantum Mechanical calculations",
+              "Chemistry focused Large Language Models",
           ],
         },
         {
@@ -197,6 +213,7 @@ export default {
   align-content: center;
   justify-content: center;
   height: auto;
+  z-index: 999;
 }
 
 .image_container {
@@ -289,6 +306,7 @@ export default {
   margin: auto;
   align-content: center;
   justify-content: center;
+  z-index: 999;
 }
 
 h1 {
@@ -303,6 +321,7 @@ h1 {
   padding-left: 4px;
   padding-top: 2px;
   margin-top: 7px;
+
 }
 
 h1 {
@@ -391,7 +410,7 @@ p:last-child {
 }
 
 li {
-  list-style-type: circle;
+  list-style-type: disc;
   margin: 0px;
   padding: 0px;
 }

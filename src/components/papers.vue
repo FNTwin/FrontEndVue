@@ -25,10 +25,16 @@ export default {
          journal: "https://doi.org/10.1016/j.carbon.2022.03.066",
          authors: "",
          years: ""} ,
-        {name: "Identification of Molecular Environments in Self-assembled Monolayers via Machine Leanring, Molecular Dynamics and Electron Spin Resonance",
-         journal: "Manuscript in preparation",
+        {name: "Spotting Local Environments in Self-Assembled Monolayer-Protected Gold Nanoparticles",
+         journal: "https://pubs.acs.org/doi/10.1021/acsnano.2c08467",
          authors: "",
          years: ""},
+        {
+          name : "Liquid phase exfoliation of graphite and boron nitride using fluorescent dyes unveiled combining experiments and simulations",
+          journal: "Manuscript in preparation",
+          authors: "",
+          years: ""
+        },
         {name: "Surface accessibility of AuNPs",
          journal: "Manuscript in preparation",
          authors: "",

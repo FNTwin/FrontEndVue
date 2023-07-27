@@ -5,8 +5,7 @@
       <h1>{{ nome }}</h1>
     </div>
     <h2 class="tldr">
-      Software Engineer with experience in computational material research and
-      Machine Learning.<br />
+      Computational chemist with a hint of Machine Learning scientist.<br />
     </h2>
     <div class="tldrme" :style="tldrmedark" ref="scroll">
       <div class="aboutmetext" :style="aboutmedark">
@@ -61,31 +60,30 @@ export default {
         "cristian.languages":
           '["Python", "Rust", "Fortran", "C++", "HTML/CSS", "Javascript"]',
         "cristian.packages":
-          '["Numpy", "SciPy", "scikit-learn", "Pandas", "Matplotlib", "PyTorch",  "PyTorch-Geometric", "Tensorflow", "MDanalysis" ,' +
-          '"DScribe", "PyTraj"]',
+          '["Numpy", "SciPy", "scikit-learn", "Pandas", "Matplotlib", "PyTorch",  "PyTorch-Geometric", "Pytorch-Lightning", "MDanalysis" ,' +
+          '"DScribe", "PyTraj", "Hugging-Face"]',
         "cristian.databases": '["MySQL", "MongoDB", "InfluxDB"]',
-        "cristian.various": '["GIT", "HPC", "Bash", "Jupyter", "Unit testing"]',
+        "cristian.various": '["GIT", "HPC", "SLURM", "Bash", "Jupyter", "Unit testing"]',
         "cristian.email": '"cris.gabellini@gmail.com"',
         "cristian.ML":
-          '["Gaussian Processes", "Multi Objective Bayesian Optimization", "Gaussian Mixtures",' +
-          ' "Deep Learning", "Graph Neural Networks", "Hierarchical Unsupervised Clustering", "Supervised Learning"]',
+          '["Gaussian Processes", "Multi Objective Bayesian Optimization", "Gaussian Mixtures", "Hierarchical Clustering"' +
+          ' "Deep Learning", "Graph Neural Networks", "Geometric Learning and Equivariant Graph Neural Networks"]',
         "cristian.location": '"Montreal, Canada"',
         "cristian.speaking": '["Italian", "English (IELTS 8.0)", "Learning French"]',
         "cristian.about":
           '"Just a guy with a passion for machine learning and for computational research of nanomaterials.' +
-          "I focused my studies on multiscale modelling techniques and all-atoms simulations and I still try to make smart things by combining them with new machine learning approaches.\n" +
-          "I'm interested in the use of machine learning to capture and use the molecular local environments based on their molecular fingerprints (SOAP vectors,Parrinello functions, other distributions).\n"+
           "Recently I moved from Gorizia, Italy to Montreal, Canada to contribute to unlock the true potential of deep learning in drug design.",
         "cristian.simulations":
-          '["Ab-initio", "All-Atoms", "Coarse-graining DPD and BD",  "Constant-pH", "Steered/Bias Dynamics", "Umbrella Sampling","Free Energy Perturbation", "Metadynamics""]',
+          '["Density Functional Theory", "Car-Parrinello MD", "Ab Initio Molecular Dynamics", "All-Atoms",  "Dissipative Particle Dynamics",'+
+          ' "Brownian Dynamics", "Gaussian Accellerated MD", "Constant-pH", "Steered/Bias Dynamics", "Umbrella Sampling", "Free Energy Perturbation", "Metadynamics, "Machine Learning Interaction Potentials" ]',
         "cristian.interests":
           '["Cooking", "Brewing", "Skateboarding", "Snowboarding", "Programming", "Videogames"]',
         "cristian.simulationSoftwares":
-          '["Amber", "LAMMPS", "GROMACS", "OpenMM+OpenFF", "Quantum-espresso"]',
+          '["Amber", "LAMMPS", "GROMACS", "OpenMM+OpenFF", "Quantum-espresso", "Psi4", "ASE"]',
         help:
           "cristian.email,  cristian.ML,  cristian.location," +
           " cristian.about, cristian.speaking, cristian.interests,  cristian.simulations,  cristian.simulationSoftwares," +
-          " cristian.education,  cristian.languages, cristian.packages,  cristian.databases,  cristian.various,  clear",
+          " cristian.education,  cristian.languages, cristian.packages,  cristian.databases,  cristian.various, clear",
       },
     };
   },
@@ -97,9 +95,10 @@ export default {
     );
     this.init("cristian.education");
     this.init("cristian.languages");
-    this.init("cristian.ML");
     this.init("cristian.various");
-    this.init("help");
+    this.init("cristian.ML");
+    this.init("cristian.simulations");
+    this.init("Digit help to display commands");
   },
   methods: {
     init(nome) {

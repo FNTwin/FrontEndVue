@@ -6,7 +6,7 @@
         <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
         <button :style="darkproject" class="holder2" @click="showModal12">
           <h1 :style="correctcolor">
-            Deposition and self-assembly of molecules (DYEs) on h-BN and Graphene monolayers
+            Liquid phase exfoliation of graphite and boron nitride using fluorescent dyes unveiled combining experiments and simulations
           </h1>
           <h2 :style="correctcolor">Python, Bash, Gromacs</h2>
         </button>
@@ -20,13 +20,13 @@
             modal-class="modalcol"
             hide-backdrop
             hide-footer
-            title="Deposition and self-assembly of molecules (DYEs) on h-BN and Graphene monolayers">
+            title="Liquid phase exfoliation of graphite and boron nitride using fluorescent dyes unveiled combining experiments and simulations">
             <div class="d-block text-center">
               <h3>
-                Study of the deposition and self-assembly of BODIPY molecules on h-BN and Graphene monolayers sheets.
+                Study of the deposition and self-assembly of BODIPY molecules on hBN and Graphene monolayers sheets as dispersants for exfoliation processes.
                 Deposition and self-assembly simulations for an increasing number of molecules to match the sperimental measures
                 and to better understand the self-assembly patterns of the molecules.
-                Free Energy Perturbation techniques used to study the binding of the molecules on the surface.
+                Free Energy Perturbation and Umbrella Sampling techniques used to study the binding free energy of the molecules on the surface.
               </h3>
             </div>
           </b-modal>
@@ -34,7 +34,7 @@
         <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
         <button :style="darkproject" class="holder2" @click="showModal11">
           <h1 :style="correctcolor">
-            Identification of Molecular Environments in Self-assembled Monolayers via Machine Leanring, <br> Molecular Dynamics and Electron Spin Resonance<br>  
+            Spotting Local Environments in Self-Assembled Monolayer-Protected Gold Nanoparticles
           </h1>
           <h2 :style="correctcolor">Python, Bash, Amber</h2>
         </button>
@@ -48,7 +48,7 @@
             modal-class="modalcol"
             hide-backdrop
             hide-footer
-            title="Identification of Molecular Environments in Self-assembled Monolayers via Machine Leanring, Molecular Dynamics and Electron Spin Resonance">
+            title="Spotting Local Environments in Self-Assembled Monolayer-Protected Gold Nanoparticles">
             <div class="d-block text-center">
               <h3>
                 Machine Learning analysis of the changes in polarity in the
@@ -337,22 +337,22 @@
         </div>
       </div>
     </div>
-    <div class="API">
+<!--     <div class="API">
       <div class="titleexp">
         <h1 :style="correctcolor">Interactive stuff.</h1>
       </div>
       <similarity />
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script>
-import similarity from "@/components/similarity.vue";
+// import similarity from "@/components/similarity.vue";
 
 export default {
   name: "projects",
   components: {
-    similarity,
+    // similarity,
   },
   data() {
     return {
@@ -465,6 +465,14 @@ export default {
 </script>
 
 <style scoped>
+:root {
+  --border: rgb(3, 169, 244);
+  
+  --g1: rgb(98, 0, 234);
+  --g2: rgb(236, 64, 122);
+  --g3: rgb(253, 216, 53);
+}
+
 .container2 {
   max-width: 100%;
   display: flex;
@@ -490,13 +498,21 @@ export default {
   /*   background: transparent; */
   /* box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.2); */
 
-  background: rgba(217, 215, 211, 0.5);
+  /* background-image: linear-gradient(
+    130deg, 
+    transparent 0% 13%, 
+     rgb(98, 0, 234),
+     rgb(236, 64, 122),
+     rgb(253, 216, 53)
+  ); */
+  background-image:  #c3c0c9 ;
 
   transition: 0.1s;
   width: 60%;
   height: 100%;
 
   border-radius: 2px;
+  border-color: black;
   margin: auto;
   margin-bottom: 1.6vh;
 
@@ -504,7 +520,7 @@ export default {
   line-height: 1.75em;
   border-bottom: 3px solid;
   border-right: 12px solid;
-  border-image: linear-gradient(360deg, #743ad5 0%, #d53a9d 100%);
+  border-image:  linear-gradient(360deg, #743ad5 0%, #d53a9d 100%);
   border-image-slice: 1;
   border-left: 0px solid;
   border-top: 0px solid;
@@ -518,6 +534,9 @@ export default {
 .holder2:hover {
   transition: 0.3s;
   box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transform: translateY(0%);
+  transition: opacity 0ms, transform 200ms cubic-bezier(.90, .06, .15, .90);
 }
 
 /deep/ .modalcol > .modal-dialog > .modal-content > .modal-header {
@@ -601,4 +620,6 @@ h3 {
   letter-spacing: 0.13em;
   font-size: min(6.5vw, 4.7em);
 }
+
+
 </style>

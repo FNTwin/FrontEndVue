@@ -28,7 +28,7 @@
               target="__blank"
               :style="color"
               ><i class="fab fa-github fa-lg"></i
-            ></a>
+            > Github</a>
           </div>
 
           <!--           <a
@@ -41,7 +41,7 @@
             >Blog</a
           > -->
 
-          <a
+          <!-- <a
             :href="`${publicPath}CG_Resume.pdf`"
             class="btn btn-layered offset square"
             role="button"
@@ -51,7 +51,7 @@
             target="_blank"
           >
             <i class="fas fa-file fa-lg"></i> CV</a
-          >
+          > -->
 
           <a
             href="mailto:cris.gabellini@gmail.com"
@@ -106,7 +106,7 @@ export default {
     color() {
       if (this.darkMode) {
         return {
-          color: "#8F3E8F!important",
+          color: "#CC6C0C!important",
           //"background-image": "linear-gradient(to right, #743ad5 0%, #d53a9d 100%)!important",
           background: "#403D40",
           transition: ".3s ease-in-out",
